@@ -6,7 +6,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 import { Home } from "./views";
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

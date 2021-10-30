@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <div>
       <Navbar
-        expand="md"
+        expand="xl"
         fixed="top"
         light
         className={navbarSolid ? "active" : ""}
