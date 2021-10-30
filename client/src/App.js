@@ -7,7 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Home } from "./views";
+import { Blogs, Home } from "./views";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/blogs" exact component={Blogs} />
         </Switch>
         <Footer />
       </Router>

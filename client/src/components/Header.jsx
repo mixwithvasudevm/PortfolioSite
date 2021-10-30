@@ -81,7 +81,7 @@ const Header = () => {
             <NavItem>
               <NavLink
                 className="mx-lg-4 text-center font-weight-bold"
-                href="/faq"
+                href="/blogs"
               >
                 BLOG
               </NavLink>
