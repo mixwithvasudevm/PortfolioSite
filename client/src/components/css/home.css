@@ -20,3 +20,93 @@
   font-weight: 500;
   text-align: left;
 }
+
+.contact {
+  background-image: url(../img/contact.jpg);
+  height: 110vh;
+  width: 100vw;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main-contact {
+  height: 80vh;
+  width: 65vw;
+  background-color: #fff;
+  position: absolute;
+  left: 35%;
+  top: 27.1%;
+}
+
+.contact-heading {
+  font-weight: 750;
+  font-size: 1rem;
+}
+
+.audio-platform {
+  position: absolute;
+  left: 29.8%;
+  top: 27.1%;
+  font-size: 2.5rem;
+}
+
+.spotify {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #1db954;
+  color: #fff;
+}
+
+.itune {
+  width: 5rem;
+  height: 5rem;
+  background-color: #710193;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.youtube {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.soundcloud {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff8800;
+  color: #fff;
+}
+
+.yt-player-wrapper {
+  height: 70vh;
+}
+
+.dark-btn {
+  border: 3px solid #000 !important;
+  color: #000 !important;
+  border-radius: 13rem !important;
+  font-weight: bold !important;
+  padding: 0.5rem 2rem !important;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 0.8rem !important;
+}
+.dark-btn:hover {
+  background-color: #f559a4 !important;
+  border: 0px solid #000 !important;
+  color: #fff !important;
+}
+.dark-btn:active,
+.dark-btn:focus {
+  box-shadow: none !important;
+  border: none;
+}
