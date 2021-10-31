@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import RichEditor from "./RichEditor";
-// import ReadOnly from "./ReadOnly";
+ import ReadOnly from "./ReadOnly";
 //by importing more we can add title and pics also 
 
 const FormApp = () => {
@@ -10,7 +10,7 @@ const FormApp = () => {
   return (
     <div>
       <RichEditor value={input} setValue={setInput} />
-      {/* <ReadOnly initialValue={initialValue} /> */}
+      <ReadOnly initialValue={initialValue} />
     </div>
   );
 };
