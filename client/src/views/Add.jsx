@@ -1,15 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 
- import Form from "../components/Form";
+import Form from "../components/Form";
 
-class Add extends Component {
-  render() {
-    return (
-      <div className="Form">
-       <Form />        
-      </div>
-    );
-  }
-}
+const Add = () => {
+  useEffect(() => {
+    document.title = "Add New Blog";
+  }, []);
+  return (
+    <div className="Form">
+      <Form />
+    </div>
+  );
+};
 
 export default Add;

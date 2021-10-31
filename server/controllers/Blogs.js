@@ -32,17 +32,16 @@ export const getPosts = async (req, res) => {
       numberOfPages: Math.ceil(total / LIMIT),
     });
   } catch (error) {
+    console.log(error);
     res.status(404).json({ message: error.message });
   }
 };
-
-
 
 export const createPost = async (req, res) => {
   const post = req.body;
   const newPost = new Blog({
     ...post,
-   // creator: req.userId, creater not needed
+    // creator: req.userId, creater not needed
     createdAt: new Date().toISOString(),
   });
 
@@ -50,6 +49,7 @@ export const createPost = async (req, res) => {
     await newPost.save();
     res.status(201).json(newPost);
   } catch (error) {
+    console.log(error);
     res.status(409).json({ message: error.message });
   }
 };

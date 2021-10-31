@@ -47,7 +47,7 @@
   position: absolute;
   left: 29.8%;
   top: 27.1%;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .spotify {
@@ -55,14 +55,14 @@
   height: 5rem;
   display: flex;
   flex-direction: column;
-  background-color: #1db954;
+  background-color: #4267b2;
   color: #fff;
 }
 
 .itune {
   width: 5rem;
   height: 5rem;
-  background-color: #710193;
+  background-color: #e1306c;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -82,7 +82,7 @@
   height: 5rem;
   display: flex;
   flex-direction: column;
-  background-color: #ff8800;
+  background-color: #0e76a8;
   color: #fff;
 }
 
@@ -98,6 +98,7 @@
   padding: 0.5rem 2rem !important;
   cursor: pointer;
   width: fit-content;
+  text-decoration: none;
   font-size: 0.8rem !important;
 }
 .dark-btn:hover {

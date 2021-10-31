@@ -42,7 +42,7 @@ const Header = () => {
             <NavItem>
               <NavLink
                 className="mx-lg-4 text-center font-weight-bold nav-link "
-                to="/home"
+                to="/"
               >
                 HOME
               </NavLink>

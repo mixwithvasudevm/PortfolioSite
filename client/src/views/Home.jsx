@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component ,useEffect} from "react";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import "../components/css/home.css";
@@ -8,8 +8,12 @@ import YouTube from "../components/Youtube";
 import Album from "../components/Album";
 import Ytext from "../components/Ytext";
 
-class Home extends Component {
-  render() {
+const Home =() => {
+
+
+    useEffect(() => {
+      document.title = "Home-Mix With Vasudev";
+    }, []);
     return (
       <div className="Home">
         <Landing />
@@ -22,6 +26,5 @@ class Home extends Component {
       </div>
     );
   }
-}
 
 export default Home;

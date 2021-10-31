@@ -1,7 +1,7 @@
-
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import blogRoutes from "./routes/blogs.js";
 // import postRoutes from "./routes/posts.js";
 import dotenv from "dotenv";
 
@@ -12,7 +12,9 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-const PORT =  process.env.PORT || 5000;
+app.use("/blogs", blogRoutes);
+
+const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.CONNECTION_URL, {
@@ -27,4 +29,3 @@ mongoose
   .catch((err) => {
     console.log(err.message);
   });
-

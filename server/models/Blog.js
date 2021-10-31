@@ -4,7 +4,6 @@ const BlogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-
   },
   body: {
     type: String,
@@ -16,4 +15,5 @@ const BlogSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-module.exports = mongoose.model("Blog", BlogSchema);
+const Blogs = mongoose.model("Blogs", BlogSchema);
+export default Blogs;

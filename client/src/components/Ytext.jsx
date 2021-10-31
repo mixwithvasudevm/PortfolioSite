@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class Ytext extends Component {
   render() {
     return (
       <Container className="mt-5">
         <Row>
-          <Col className="d-flex align-items-center justify-content-center text-center">
+          <Col className="d-flex align-items-center justify-content-center text-center font-weight-bold">
             It is a long established fact that a reader will be distracted by
             the readable
             <br />
@@ -18,13 +19,17 @@ class Ytext extends Component {
             className="d-flex align-items-center justify-content-center"
             xs="2"
           >
-            <div className="dark-btn">YOUTUBE</div>
+            <Link to="/youtube" className="dark-btn">
+              YOUTUBE
+            </Link>
           </Col>
           <Col
             className="d-flex align-items-center justify-content-center"
             xs="2"
           >
-            <div className="dark-btn">AEMP COURSES</div>
+            <Link to="/aemp" className="dark-btn">
+              AEMP COURSES
+            </Link>
           </Col>
         </Row>
         <Row>

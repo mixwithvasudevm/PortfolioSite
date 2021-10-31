@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-import Platform from "./AudioPlatform";
+import Platform from "./SocialPlatform";
 
 class Contact extends Component {
   render() {

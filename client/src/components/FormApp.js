@@ -1,17 +1,24 @@
 import React, { useState } from "react";
-
+import { Container, Row, Col } from "reactstrap";
 import RichEditor from "./RichEditor";
 // import ReadOnly from "./ReadOnly";
-//by importing more we can add title and pics also 
+//by importing more we can add title and pics also
 
 const FormApp = () => {
-  const [input, setInput] = useState(initialValue);
-  console.log(JSON.stringify(input));
+  const [body, setBody] = useState(initialValue);
+  console.log(JSON.stringify(body));
   return (
-    <div>
-      <RichEditor value={input} setValue={setInput} />
+    <Container>
+      <Row>
+        <Col>
+        <h3>BODY</h3>
+        </Col>
+        </Row>
+      <Row>
+        <RichEditor value={body} setValue={setBody} />
+      </Row>
       {/* <ReadOnly initialValue={initialValue} /> */}
-    </div>
+    </Container>
   );
 };
 
@@ -20,8 +27,6 @@ export default FormApp;
 const initialValue = [
   {
     type: "paragraph",
-    children: [
-      { text: "" },
-    ]
-  },  
+    children: [{ text: "" }],
+  },
 ];

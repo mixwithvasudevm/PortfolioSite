@@ -19,13 +19,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #000;
 }
-::placeholder {
-  color: #fff;
-  letter-spacing: 0.2rem;
-}
 
 .full-container {
   max-width: unset !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 1);
 }
 
 h2::after {
@@ -84,6 +85,20 @@ h2::after {
   transform: scaleX(1);
 }
 
+.navbar-collapse {
+  background-color: #fff !important;
+}
+
+.navbar-toggler {
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.6) !important;
+  border: 3px solid;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.navbar-toggler:hover {
+  box-shadow: 0 0 0 0.25rem;
+}
 /* For Footer */
 
 .footer {
@@ -105,10 +120,15 @@ h2::after {
   border: none;
   padding: 20px 20px;
 }
-input,
+.newsletter-input input,
 select,
 textarea {
   color: #fff;
+}
+
+::placeholder .newsletter-input {
+  color: #fff;
+  letter-spacing: 0.2rem;
 }
 .newsletter-input:active {
   border: none;

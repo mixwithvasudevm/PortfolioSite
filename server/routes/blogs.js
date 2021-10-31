@@ -5,18 +5,16 @@ import {
   createPost,
   updatePost,
   deletePost,
-} from "../controllers/blogs.js";
-import auth from "../middleware/auth.js";
+} from "../controllers/Blogs.js";
 
 const router = express.Router();
 
-//these are my routes 
+//these are my routes
 router.get("/blogs", getPosts);
 router.get("/blogs/:id", getPost);
 
-
-router.post("/blogs", auth, createPost);
-router.patch("/blogs/:id", auth, updatePost);
-router.delete("/blogs/:id", auth, deletePost);
+router.post("/", createPost);
+router.patch("/:id", updatePost);
+router.delete("/:id", deletePost);
 
 export default router;
