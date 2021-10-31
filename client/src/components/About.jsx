@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import i1 from "./img/About.jpg";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 
 class About extends Component {
   render() {
@@ -47,7 +52,7 @@ class About extends Component {
                     <FaFacebookF />
                     &nbsp;&nbsp;&nbsp;
                     <FaInstagram /> &nbsp;&nbsp;&nbsp;
-                    <FaTwitter />
+                    <FaTwitter /> &nbsp;&nbsp; <FaLinkedin />
                   </Col>
                 </Row>
               </Container>

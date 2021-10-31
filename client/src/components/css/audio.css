@@ -1,9 +1,6 @@
 .audioPlayer {
-  --primary: #87ceeb;
+  --primary: #00b9c6;
   --secondary: #fff;
-
-  align-items: center;
-  display: flex;
   position: absolute;
   left: 0%;
   top: 80.7%;
@@ -11,17 +8,28 @@
   background-color: rgba(0, 0, 0, 1);
   height: 16vh;
 }
+.audio-content {
+  width: 75vw;
+  margin-left: 5vw !important;
+}
+.audioPlayer img {
+  width: 12vh;
+  height: 12vh;
+}
 
+.audio-speaker {
+  color: #fff;
+  font-size: 2rem;
+  align-content: right;
+  cursor: pointer;
+  width: 20vw !important;
+}
 .forwardBackward {
   background: none;
   border: none;
-  display: flex;
-  align-items: center;
   font-family: monospace;
   font-size: 30px;
   cursor: pointer;
-  margin-left: 2vw;
-  margin-right: 2vw;
   color: #fff;
 }
 
@@ -52,13 +60,23 @@
   font-family: monospace;
   font-size: 0.8rem;
   color: #fff;
+  display: inline-block;
 }
 
 .currentTime {
-  margin-left: 25px;
   color: #fff;
 }
 
+.audio-album-name {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.audio-album {
+  color: #ffd500;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 .progressBar {
   --bar-bg: #808080;
   --seek-before-width: 0;
@@ -73,7 +91,6 @@
   width: 30vw;
   height: 6px;
   outline: none;
-  margin-left: 10vw;
 }
 
 /* progress bar - safari */
@@ -108,9 +125,7 @@
   background-color: var(--seek-before-color);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
+
   z-index: 2;
   cursor: pointer;
 }

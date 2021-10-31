@@ -7,8 +7,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap";
+
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,64 +41,64 @@ const Header = () => {
           <Nav navbar>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold "
-                href="/"
+                className="mx-lg-4 text-center font-weight-bold nav-link "
+                to="/home"
               >
                 HOME
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/about"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/about"
               >
                 ABOUT
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold "
-                href="/"
+                className="mx-lg-4 text-center font-weight-bold nav-link "
+                to="/aemp"
               >
                 AEMP COURSES
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/finance"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/finance"
               >
                 STUDENT'S WORK
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/about"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/about"
               >
                 YOUTUBE
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/blogs"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/blogs"
               >
                 BLOG
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/faq"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/faq"
               >
                 FAQ
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold"
-                href="/faq"
+                className="mx-lg-4 text-center font-weight-bold nav-link"
+                to="/faq"
               >
                 CONTACT
               </NavLink>

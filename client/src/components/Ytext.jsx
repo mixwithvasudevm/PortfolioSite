@@ -13,14 +13,17 @@ class Ytext extends Component {
             content of a page when looking at its layout.
           </Col>
         </Row>
-        <Row className="mt-5">
+        <Row className="mt-5 d-flex align-items-center justify-content-center">
           <Col
             className="d-flex align-items-center justify-content-center"
             xs="2"
           >
             <div className="dark-btn">YOUTUBE</div>
           </Col>
-          <Col>
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            xs="2"
+          >
             <div className="dark-btn">AEMP COURSES</div>
           </Col>
         </Row>

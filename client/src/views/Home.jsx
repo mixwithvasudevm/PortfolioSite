@@ -5,6 +5,7 @@ import "../components/css/home.css";
 import Guest from "../components/Guest";
 import Landing from "../components/Landing";
 import YouTube from "../components/Youtube";
+import Album from "../components/Album";
 import Ytext from "../components/Ytext";
 
 class Home extends Component {
@@ -12,9 +13,10 @@ class Home extends Component {
     return (
       <div className="Home">
         <Landing />
-        <Ytext/>
+        <Album />
+        <Ytext />
         <About />
-         <YouTube/>
+        <YouTube />
         <Guest />
         <Contact />
       </div>

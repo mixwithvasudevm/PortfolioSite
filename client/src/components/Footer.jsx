@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 import { Container, Row, Col } from "reactstrap";
 import Newsletter from "./Newsletter";
@@ -44,12 +44,12 @@ const Footer = (props) => {
             <Col xs="3"></Col>
             <Col
               xs="3"
-              className="d-flex align-items-right justify-content-right"
-              fontSize="1rem"
+              className="d-flex align-items-right justify-content-right footer-icons px-4"
             >
-              <FaLinkedin />
-              <FaInstagram />
-              <FaYoutube />
+              <FaLinkedin /> &nbsp;&nbsp;&nbsp;&nbsp;
+              <FaInstagram /> &nbsp;&nbsp;&nbsp;&nbsp;
+              <FaYoutube /> &nbsp;&nbsp;&nbsp;&nbsp;
+              <FaTwitter />
             </Col>
           </Row>
         </Container>
