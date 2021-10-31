@@ -38,6 +38,10 @@ h2::after {
   width: 100px;
   margin-top: 20px;
 }
+.courses-offered::after
+{
+  width: auto;
+}
 /* For Header */
 .navbar {
   font-size: 1.25rem;
