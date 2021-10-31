@@ -2,6 +2,7 @@ import React, { Component ,useMemo,useState} from "react";
 import { Button, Container, Row, Col } from "reactstrap";
 import {createEditor} from 'slate';
 import {Slate, Editable, withReact} from 'slate-react';
+import FormApp from "./FormApp";
 
 const BlogForm =()=>{
     const editor=useMemo(() => withReact(createEditor()), [])
@@ -38,7 +39,7 @@ class Form extends Component {
           </Row>  
 
 <Row>
-  {BlogForm} 
+<FormApp /> 
 </Row>
 
 
