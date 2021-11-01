@@ -1,20 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import * as api from "../api";
 
+const intialValue = [];
 
 const BlogPage = (props) => {
-  const src = props.infoData?.src;
-  const title = props.infoData?.title;
-  const para = props.infoData?.para;
-  const date = props.infoData?.date;
-
+  console.log("lets go");
+  const id = props.match.params.id;
+  const [data, setData] = useState(intialValue);
   useEffect(() => {
-    // if (props.infoData === undefined)
-    //   return <Error404 msg="Unexisting Event" />;
-      
-    document.title = `${title} - Blogs`;
+    api
+      .fetchItem(id)
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+
+  const src = data.src;
+  const title = data.title;
+  const para = data.body;
+  const date = data.date;
+  document.title = `${data.title} - Blogs`;
 
   return (
     <Container className="mt-5 mb-5 events-page">
@@ -40,7 +51,7 @@ const BlogPage = (props) => {
       <Row className="mt-5 d-flex align-items-center justify-content-center">
         <Col xs="12" lg="9" xl="8">
           <h5>
-            <a href="/blog">Back</a>
+            <a href="/blogs">Back</a>
           </h5>
         </Col>
       </Row>

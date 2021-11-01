@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 // this is for showing ShowBlogs
 class ShowBlogs extends Component {
@@ -18,9 +19,9 @@ class ShowBlogs extends Component {
           {/*  <Row> we Show ShowBlogs here   </Row>...*/}
           <Row>
             <Col className="d-flex align-items-center justify-content-center ">
-              <a href="/blogs/add">
+              <Link to="/auth">
                 <Button color="success">Add Blog</Button>{" "}
-              </a>
+              </Link>
             </Col>
           </Row>
         </Container>

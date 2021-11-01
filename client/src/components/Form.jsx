@@ -1,9 +1,10 @@
 import React, { Component, useMemo, useState } from "react";
-import { Button, Container, Row, Col } from "reactstrap";
+import { Button, Container, Row, Col, Alert } from "reactstrap";
 import { createEditor } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import RichEditor from "./RichEditor";
 import ReadOnly from "./ReadOnly";
+import { useHistory } from "react-router-dom";
 import * as api from "../api";
 import "./css/blog.css";
 // import FormApp from "./FormApp";
@@ -38,7 +39,9 @@ const initialValue = [
 const Form = () => {
   const [title, setTitle] = useState(null);
   const [body, setBody] = useState(initialValue);
+  const [alert, setAlert] = useState(false);
 
+  const history = useHistory();
   const submitBlog = async () => {
     console.log(body);
     const values = {
@@ -50,9 +53,11 @@ const Form = () => {
       .then((response) => {
         setTitle(null);
         setBody(initialValue);
+        history.push("/blogs");
       })
       .catch((error) => {
         console.log(error);
+        setAlert(true);
       });
   };
 
@@ -64,6 +69,13 @@ const Form = () => {
             Add New Blog
           </Col>
         </Row>
+        {alert && (
+          <Row className="mt-4">
+            <Alert color="danger">
+             Please fill all fields
+            </Alert>
+          </Row>
+        )}
         <Row>
           <h3>TITLE</h3>
         </Row>

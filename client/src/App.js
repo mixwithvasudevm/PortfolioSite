@@ -7,7 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Blogs, Home, Add, Aemp } from "./views";
+import { Blogs, Home, Add, Aemp, BlogPage, Auth } from "./views";
 
 function App() {
   return (
@@ -19,6 +19,8 @@ function App() {
           <Route path="/aemp" exact component={Aemp} />
           <Route path="/blogs" exact component={Blogs} />
           <Route path="/blogs/add" exact component={Add} />
+          <Route path="/blogs/:id" exact component={BlogPage} />
+          <Route path="/auth" exact component={Auth} />
         </Switch>
         <Footer />
       </Router>
