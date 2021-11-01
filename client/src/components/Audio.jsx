@@ -13,7 +13,7 @@ const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [audio, setAudio] = useState(false);
+  const [audio, setAudio] = useState(true);
 
   console.log(audio);
 

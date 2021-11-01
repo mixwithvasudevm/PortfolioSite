@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
+
 const BlogPage = (props) => {
   const src = props.infoData?.src;
   const title = props.infoData?.title;
@@ -39,7 +40,7 @@ const BlogPage = (props) => {
       <Row className="mt-5 d-flex align-items-center justify-content-center">
         <Col xs="12" lg="9" xl="8">
           <h5>
-            <Link to="/blog">Back</Link>
+            <a href="/blog">Back</a>
           </h5>
         </Col>
       </Row>

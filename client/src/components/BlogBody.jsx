@@ -1,24 +1,33 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState,useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
+import ShowBlogs from "./ShowBlogs";
+import BlogPage from "./BlogPage";
 
 const infoData = [];
 const initialValue = [];
+
 const BlogBody = (props) => {
   const [infoData, setInfoData] = useState(initialValue);
-  api
+  useEffect(() => {
+    api
     .fetchItems(1)
     .then((res) => {
+      console.log(res.data.data);
       setInfoData(res.data.data);
     })
     .catch((error) => {
       console.log(error);
     });
+  }, []);
   return (
     <div>
       <Container className="my-5 py-5">
+        <Row>
+          <ShowBlogs />
+        </Row>
         <Row className="d-flex align-items-center justify-content-center">
           {infoData.map((item, index) => {
             return (
@@ -33,7 +42,7 @@ const BlogBody = (props) => {
                     title={item.title}
                     para={item.body}
                     src={item.src}
-                    id={index}
+                    id={item.id}
                   />
                 </div>
                 {/* </Fade> */}
@@ -46,6 +55,15 @@ const BlogBody = (props) => {
   );
 };
 
-export default BlogBody;
+const BlogsMain = () => {
+  return (
+    <Router>
+      <Route exact path="/blogs" component={BlogBody} />
+      <Route path={`/blogs/id`} component={(props) => <BlogPage />} />
+    </Router>
+  );
+};
+
+export default BlogsMain;
 
 export { infoData };

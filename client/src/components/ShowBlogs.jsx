@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Button, Container, Row, Col } from "reactstrap";
-import {Link} from "react-router-dom";
-import * as api from "../api";
 
 // this is for showing ShowBlogs
 class ShowBlogs extends Component {
