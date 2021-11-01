@@ -66,9 +66,10 @@ class StudentBody extends Component {
             <Player url="https://youtu.be/TiqU1J-e5WY"/> 
             </Col>
            </Row>
-          
-        </Container>        
+
+        </Container>  
       </div>
+      
     );
   }
 }
