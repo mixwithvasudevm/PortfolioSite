@@ -66,7 +66,7 @@ const Header = () => {
             <NavItem>
               <NavLink
                 className="mx-lg-4 text-center font-weight-bold nav-link"
-                to="/finance"
+                to="/students"
               >
                 STUDENT'S WORK
               </NavLink>
