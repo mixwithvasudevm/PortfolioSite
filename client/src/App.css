@@ -292,3 +292,26 @@ textarea {
 }
 
 /* pricing css ends */
+.about-img-page
+{
+  height: 25rem;
+
+}
+.few-of-my-work
+{
+  margin-left: 30%;
+}
+.About-page-work{
+  width: 400px;
+  height: 220px;
+}
+/* .about-page-clients
+{
+  width: 204px;
+  height: 224px;
+}
+.about-page-clients-square
+{
+  width: 204px;
+  height: 204px;
+} */

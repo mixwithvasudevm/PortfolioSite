@@ -7,7 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Blogs, Home, Add, Aemp, Students, SignIn } from "./views";
+import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView } from "./views";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/blogs/add" exact component={Add} />
           <Route path="/auth" exact component={SignIn} />
           <Route path="/students" exact component={Students} />
+          <Route path="/about" exact component={AboutPageView} />
         </Switch>
         <Footer />
       </Router>

@@ -4,4 +4,5 @@ export { default as Add } from "./Add";
 export { default as Aemp } from "./Aemp";
 export { default as Students } from "./Students";
 export { default as SignIn } from "./SignIn";
+export { default as AboutPageView } from "./AboutPageView";
 
