@@ -9,7 +9,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const fetchUser = () => API.get("/user");
+export const confirmUser = (result) => API.post(`/auth/google`,result);
 export const fetchItem = (id) => API.get(`/blogs/${id}`);
 export const fetchItems = (page) => API.get(`/blogs?page=${page}`);
 export const fetchItemsBySearch = (searchQuery) =>

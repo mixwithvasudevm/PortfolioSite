@@ -9,7 +9,7 @@ import {
   NavItem,
 } from "reactstrap";
 
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +40,12 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar className="justify-content-between">
           <Nav navbar>
             <NavItem>
-              <NavLink
+              <Link
                 className="mx-lg-4 text-center font-weight-bold nav-link "
                 to="/"
               >
                 HOME
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem>
               <NavLink

@@ -3,7 +3,6 @@ import { getUser,redirect } from "../controllers/User.js";
 
 const router = express.Router();
 
-router.get("/",getUser);
-router.get("/secert", redirect);
+router.post("/",getUser);
 
 export default router;
