@@ -6,8 +6,8 @@ import {
   Switch,
 } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Blogs, Home, Add, Aemp, Students, SignIn, Contact, Faq } from "./views";
 import BlogPage from "./views/BlogPage";
+import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView ,Contact, Faq} from "./views";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/students" exact component={Students} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/faq" exact component={Faq} />
+          <Route path="/about" exact component={AboutPageView} />
         </Switch>
         <Footer />
       </Router>

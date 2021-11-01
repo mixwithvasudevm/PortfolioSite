@@ -71,6 +71,7 @@ class StudentBody extends Component {
           </Row>
         </Container>
       </div>
+      
     );
   }
 }
