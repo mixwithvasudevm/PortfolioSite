@@ -4,7 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 
 const Player= (props) => {
 
-    const url=props.url;
+const url=props.url;
   return (
     <Container className="full-container ">
       <Row className="">
