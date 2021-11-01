@@ -190,7 +190,7 @@ textarea {
 .pricing-plan-title {
   font-size: 20px;
   color: #000;
-  margin-bottom: 11px;
+  margin-bottom: 0px;
   font-weight: normal; }
 
 .pricing-plan-cost {

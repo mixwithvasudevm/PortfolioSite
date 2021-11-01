@@ -13,7 +13,8 @@ class AempBody extends Component {
           <div className="card pricing-card pricing-card-highlighted  pricing-plan-pro">
             <div className="card-body">
                 <i className="mdi mdi-trophy pricing-plan-icon"></i>
-              <p className="pricing-plan-title">3-month online course (TWICE A WEEK)</p>
+              <p className="pricing-plan-title">3-MONTH ONLINE COURSE</p>
+              <p>(TWICE A WEEK)</p>
               <h4 className="pricing-plan-cost ml-auto ">Rs. 40,000/- + GST</h4>
              <Row>
               <Col>
@@ -46,7 +47,8 @@ class AempBody extends Component {
           <div className="card pricing-card pricing-card-highlighted pricing-plan-basic">
             <div className="card-body">
               <i className="mdi mdi-cube-outline pricing-plan-icon"></i>
-              <p className="pricing-plan-title">6-month online course (TWICE A WEEK)</p>
+              <p className="pricing-plan-title">6-MONTH ONLINE COURSE</p>
+              <p>(TWICE A WEEK)</p>
               <h4 className="pricing-plan-cost ml-auto mb-1">Rs. 85,000/- + GST</h4>
               <p className="pricing-plan-title mt-0 mb-4 text-danger">(Rockschool, London Affiliated)</p>
                  <Row>
