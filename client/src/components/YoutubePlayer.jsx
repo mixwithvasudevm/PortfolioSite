@@ -5,11 +5,9 @@ import { Container, Row, Col } from "reactstrap";
 const Player= (props) => {
 
 const url=props.url;
+const cls=props.cls;
   return (
-    <Container className="full-container ">
-      <Row className="">
-        <Col>
-          <div className="">
+    <div className={`${cls}`}>
             <ReactPlayer
               className="yt-player"
               url={url}
@@ -18,10 +16,7 @@ const url=props.url;
               height="100%"
               pip={true}
             />
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    </div>
   );
 };
 

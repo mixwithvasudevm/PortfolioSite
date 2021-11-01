@@ -1,7 +1,4 @@
-import React, { Component, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import BlogsMain, { infoData } from "../components/BlogBody";
-import BlogPage from "./BlogPage";
+import React, {useEffect } from "react";
 import BlogBody from "../components/BlogBody";
 
 const Blogs = () => {

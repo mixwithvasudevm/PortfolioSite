@@ -1,33 +1,11 @@
-import React, { Component, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Button, Container, Row, Col, Alert } from "reactstrap";
-import { createEditor } from "slate";
-import { Slate, Editable, withReact } from "slate-react";
+import FileBase from "react-file-base64";
 import RichEditor from "./RichEditor";
-import ReadOnly from "./ReadOnly";
 import { useHistory } from "react-router-dom";
 import * as api from "../api";
 import "./css/blog.css";
 // import FormApp from "./FormApp";
-
-const BlogForm = () => {
-  const editor = useMemo(() => withReact(createEditor()), []);
-  // Add the initial value when setting up our state.
-  const [value, setValue] = useState([
-    {
-      type: "paragraph",
-      children: [{ text: "A line of text in a paragraph." }],
-    },
-  ]);
-  return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={(newValue) => setValue(newValue)}
-    >
-      <Editable />
-    </Slate>
-  );
-};
 
 const initialValue = [
   {
@@ -39,15 +17,20 @@ const initialValue = [
 const Form = () => {
   const [title, setTitle] = useState(null);
   const [body, setBody] = useState(initialValue);
+  const [selectedFile,setSelectedFile]=useState(null);
   const [alert, setAlert] = useState(false);
 
   const history = useHistory();
-  const submitBlog = async () => {
-    console.log(body);
+  const submitBlog = async (e) => {
+    // e.preventDefault();
+    console.log(selectedFile);
     const values = {
       title: title,
       body: "xyz",
+      selectedFile: selectedFile.selectedFile,
     };
+
+    console.log(values);
     api
       .createItem(values)
       .then((response) => {
@@ -71,9 +54,7 @@ const Form = () => {
         </Row>
         {alert && (
           <Row className="mt-4">
-            <Alert color="danger">
-             Please fill all fields
-            </Alert>
+            <Alert color="danger">Please fill all fields</Alert>
           </Row>
         )}
         <Row>
@@ -101,6 +82,15 @@ const Form = () => {
             {/* <ReadOnly initialValue={initialValue} /> */}
           </Container>
         </Row>
+        <Row>
+        <FileBase
+            type="file"
+            multiple={false}
+            onDone={({ base64 }) =>
+              setSelectedFile({ selectedFile: base64 })
+            }
+          />
+          </Row>
 
         <Row>
           <Col className="d-flex align-items-center justify-content-center ">

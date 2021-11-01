@@ -10,6 +10,10 @@ const BlogSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  selectedFile: {
+    type: String,
+    trim: true,
+    },
   createdAt: {
     type: Date,
     default: Date.now,

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Button,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -9,7 +8,7 @@ import {
   NavItem,
 } from "reactstrap";
 
-import { NavLink,Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +39,12 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar className="justify-content-between">
           <Nav navbar>
             <NavItem>
-              <Link
+              <NavLink
                 className="mx-lg-4 text-center font-weight-bold nav-link "
-                to="/"
+                to="/home"
               >
                 HOME
-              </Link>
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
@@ -98,7 +97,7 @@ const Header = () => {
             <NavItem>
               <NavLink
                 className="mx-lg-4 text-center font-weight-bold nav-link"
-                to="/faq"
+                to="/contact"
               >
                 CONTACT
               </NavLink>

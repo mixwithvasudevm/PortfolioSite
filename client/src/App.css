@@ -38,8 +38,7 @@ h2::after {
   width: 100px;
   margin-top: 20px;
 }
-.courses-offered::after
-{
+.courses-offered::after {
   width: auto;
 }
 /* For Header */
@@ -143,6 +142,7 @@ textarea {
   height: 6vh;
   border-radius: 5vw;
   background-color: #87ceeb;
+  color: #fff;
 }
 
 .footer-bottom {
@@ -158,15 +158,16 @@ textarea {
   font-size: 1.3rem;
 }
 
-
 /* pricing css sarts */
 .pricing-table-subtitle {
   margin-top: 68px;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .pricing-table-title {
   font-weight: bold;
-  margin-bottom: 68px; }
+  margin-bottom: 68px;
+}
 
 .pricing-card {
   border: none;
@@ -174,30 +175,37 @@ textarea {
   margin-bottom: 40px;
   text-align: center;
   -webkit-transition: all 0.6s;
-  transition: all 0.6s; }
-  .pricing-card:hover {
-    box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55); }
-  .pricing-card.pricing-card-highlighted {
-    box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55); }
-  .pricing-card:hover {
-    box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px); }
-  .pricing-card .card-body {
-    padding-top: 55px;
-    padding-bottom: 62px; }
+  transition: all 0.6s;
+}
+.pricing-card:hover {
+  box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
+}
+.pricing-card.pricing-card-highlighted {
+  box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
+}
+.pricing-card:hover {
+  box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.pricing-card .card-body {
+  padding-top: 55px;
+  padding-bottom: 62px;
+}
 
 .pricing-plan-title {
   font-size: 20px;
   color: #000;
   margin-bottom: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .pricing-plan-cost {
   font-size: 30px;
   color: #000;
   font-weight: bold;
-  margin-bottom: 29px; }
+  margin-bottom: 29px;
+}
 
 .pricing-plan-icon {
   display: inline-block;
@@ -205,13 +213,17 @@ textarea {
   height: 40px;
   font-size: 40px;
   line-height: 1;
-  margin-bottom: 24px; }
-  .pricing-plan-basic .pricing-plan-icon {
-    color: #fe397a; }
-  .pricing-plan-pro .pricing-plan-icon {
-    color: #10bb87; }
-  .pricing-plan-enterprise .pricing-plan-icon {
-    color: #5d78ff; }
+  margin-bottom: 24px;
+}
+.pricing-plan-basic .pricing-plan-icon {
+  color: #fe397a;
+}
+.pricing-plan-pro .pricing-plan-icon {
+  color: #10bb87;
+}
+.pricing-plan-enterprise .pricing-plan-icon {
+  color: #5d78ff;
+}
 
 .pricing-plan-features {
   list-style: none;
@@ -219,7 +231,8 @@ textarea {
   font-size: 14px;
   line-height: 2.14;
   margin-bottom: 35px;
-  color: #303132; }
+  color: #303132;
+}
 
 .pricing-plan-purchase-btn {
   color: #000;
@@ -234,61 +247,71 @@ textarea {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-pack: center;
-          justify-content: center; }
-  .pricing-plan-basic .pricing-plan-purchase-btn {
-    background-color: #fe397a;
-    color: #fff; }
-    .pricing-plan-basic .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #b7013d; }
-    .pricing-plan-basic .pricing-plan-purchase-btn:active {
-      -webkit-transform: translateY(3px);
-              transform: translateY(3px);
-      box-shadow: none; }
-  .pricing-plan-pro .pricing-plan-purchase-btn {
-    background-color: #10bb87;
-    color: #fff; }
-    .pricing-plan-pro .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #0a7554; }
-    .pricing-plan-pro .pricing-plan-purchase-btn:active {
-      -webkit-transform: translateY(3px);
-              transform: translateY(3px);
-      box-shadow: none; }
-  .pricing-plan-enterprise .pricing-plan-purchase-btn {
-    background-color: #5d78ff;
-    color: #fff; }
-    .pricing-plan-enterprise .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #1138ff; }
-    .pricing-plan-enterprise .pricing-plan-purchase-btn:active {
-      -webkit-transform: translateY(3px);
-              transform: translateY(3px);
-      box-shadow: none; 
+  justify-content: center;
 }
-.firstprice   .secondprice ,.registernowbtn
-{
+.pricing-plan-basic .pricing-plan-purchase-btn {
+  background-color: #fe397a;
+  color: #fff;
+}
+.pricing-plan-basic .pricing-plan-purchase-btn:hover {
+  box-shadow: 0 3px 0 0 #b7013d;
+}
+.pricing-plan-basic .pricing-plan-purchase-btn:active {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  box-shadow: none;
+}
+.pricing-plan-pro .pricing-plan-purchase-btn {
+  background-color: #10bb87;
+  color: #fff;
+}
+.pricing-plan-pro .pricing-plan-purchase-btn:hover {
+  box-shadow: 0 3px 0 0 #0a7554;
+}
+.pricing-plan-pro .pricing-plan-purchase-btn:active {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  box-shadow: none;
+}
+.pricing-plan-enterprise .pricing-plan-purchase-btn {
+  background-color: #5d78ff;
+  color: #fff;
+}
+.pricing-plan-enterprise .pricing-plan-purchase-btn:hover {
+  box-shadow: 0 3px 0 0 #1138ff;
+}
+.pricing-plan-enterprise .pricing-plan-purchase-btn:active {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  box-shadow: none;
+}
+.firstprice .secondprice,
+.registernowbtn {
   margin-left: auto;
   margin-right: auto;
 }
-.registernowbtn
-{
+.registernowbtn {
   margin-left: auto;
   margin-right: auto;
 }
-.firstprice  
-{
+.firstprice {
   margin-left: auto;
   margin-right: 50px;
 }
-.secondprice
-{
+.secondprice {
   margin-left: 50px;
   margin-right: auto;
 }
-.pricingli{
- line-height: 3rem;
+.pricingli {
+  line-height: 3rem;
 }
 
 /* pricing css ends */
+
+.student-video {
+  height: 30vh;
+}

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 const Newsletter = () => {
@@ -19,11 +19,11 @@ const Newsletter = () => {
           </Row>
           <Row>
             <Col className="d-flex align-items-center justify-content-center mb-5 mt-2 text-white">
-              <input
-                type="submit"
+              <button
                 className="newsletter-button"
-                value={submit}
-              />
+              >
+              {submit}
+              </button>
             </Col>
           </Row>
         </Container>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
 import * as api from "../api";
 
 const intialValue = [];
@@ -21,7 +20,7 @@ const BlogPage = (props) => {
       });
   }, []);
 
-  const src = data.src;
+  const src = data.selectedFile;
   const title = data.title;
   const para = data.body;
   const date = data.date;

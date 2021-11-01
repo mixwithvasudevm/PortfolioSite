@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import {AiOutlineArrowRight} from "react-icons/ai";
 
 const BlogCard = (props) => {
   const title = props.title;
@@ -8,20 +9,21 @@ const BlogCard = (props) => {
   const para = props.para;
   const src = props.src;
   const date = props.date;
+  console.log({ title });
   return (
-    <Container>
+    <Container className="blog-card full-container mb-5 shadow bg-white rounded">
       <Row className={`flex-column flex-md-row`}>
-        <Col>
-          <img src={src} alt="" />
+        <Col className="d-flex align-items-center justify-content-center">
+          <img src={src} alt="" className="blog-img" />
         </Col>
-        <Col className="pt-4">
+        <Col className=" mt-3 pt-4">
           <h3>{title}</h3>
           <p>
             {para}, {date}
           </p>
-          <h5>
-            <Link to={`/blogs/${id}`}>Read More</Link>
-          </h5>
+          <p>
+            <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
+          </p>
         </Col>
       </Row>
     </Container>

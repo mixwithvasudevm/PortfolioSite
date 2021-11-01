@@ -1,0 +1,41 @@
+:root {
+  --white: #fff;
+  --yellow: #fff;
+  --light-gray: #363636;
+  --dark: #242424;
+  --dark-yellow: #807506;
+}
+
+.faq-heading {
+  background-color: var(--dark);
+  width: 100%;
+  height: 60vh !important;
+  margin: auto;
+  margin-top: 0px !important;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-position-y: bottom;
+}
+.faq-head {
+  background-color: var(--yellow);
+}
+
+.faq-text-main {
+  margin-top: 20vh !important;
+}
+
+.faq-card {
+  width: 50vw !important;
+  margin-bottom: 0 !important;
+}
+
+.faq-card-header {
+  cursor: pointer;
+}
+.faq-card-header strong {
+  width: 100%;
+}
+
+.faq-image {
+  height: 67%;
+}

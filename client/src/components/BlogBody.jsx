@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -7,7 +7,6 @@ import {
   PaginationItem,
   PaginationLink,
 } from "reactstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
 import ShowBlogs from "./ShowBlogs";
@@ -48,7 +47,7 @@ const BlogBody = (props) => {
                   <BlogCard
                     title={item.title}
                     para={item.body}
-                    src={item.src}
+                    src={item.selectedFile}
                     id={item._id}
                   />
                 </div>

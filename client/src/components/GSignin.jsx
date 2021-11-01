@@ -1,5 +1,4 @@
 import React from "react";
-import "./css/auth.css";
 import { GoogleLogin } from "react-google-login";
 import { useHistory } from "react-router-dom";
 import {BsGoogle} from "react-icons/bs";
