@@ -10,8 +10,8 @@ import {
 const router = express.Router();
 
 //these are my routes
-router.get("/blogs", getPosts);
-router.get("/blogs/:id", getPost);
+router.get("/", getPosts);
+router.get("/:id", getPost);
 
 router.post("/", createPost);
 router.patch("/:id", updatePost);

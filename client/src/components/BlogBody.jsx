@@ -11,12 +11,11 @@ const BlogBody = (props) => {
   api
     .fetchItems(1)
     .then((res) => {
-      setInfoData(res.data);
+      setInfoData(res.data.data);
     })
     .catch((error) => {
       console.log(error);
     });
-  console.log(infoData);
   return (
     <div>
       <Container className="my-5 py-5">
@@ -32,7 +31,7 @@ const BlogBody = (props) => {
                 <div>
                   <BlogCard
                     title={item.title}
-                    para={item.para}
+                    para={item.body}
                     src={item.src}
                     id={index}
                   />

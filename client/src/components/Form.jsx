@@ -43,7 +43,7 @@ const Form = () => {
     console.log(body);
     const values = {
       title: title,
-      body: body,
+      body: "xyz",
     };
     api
       .createItem(values)

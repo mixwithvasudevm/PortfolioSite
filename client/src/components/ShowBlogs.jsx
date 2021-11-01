@@ -20,9 +20,9 @@ class ShowBlogs extends Component {
           {/*  <Row> we Show ShowBlogs here   </Row>...*/}
           <Row>
             <Col className="d-flex align-items-center justify-content-center ">
-              <Link to="/blogs/add">
+              <a href="/blogs/add">
                 <Button color="success">Add Blog</Button>{" "}
-              </Link>
+              </a>
             </Col>
           </Row>
         </Container>
