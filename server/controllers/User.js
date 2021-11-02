@@ -48,10 +48,9 @@ dotenv.config();
 
 
 export const getUser = async (req, res) => {
-  console.log(req.body.googleId);
   const {id} = req.body.googleId;
   try {
-    const post = await User.findById(id);
+    const post = await User.findOne({ googleId: `${id}` });
     if(post)
     {
       console.log(post);
@@ -59,14 +58,11 @@ export const getUser = async (req, res) => {
     }
     else
     {
-      res.status(200).send("not okay");
+      console.log("lets go");
+      res.status(200).send("okay");
     }
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
-};
-
-export const redirect= async (req, res) => {
-
 };
 

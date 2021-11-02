@@ -5,11 +5,46 @@
 .blog-card {
   height: 50vh;
   width: 75vw;
-
 }
 
 .blog-img {
   width: 25vw;
   height: 40vh;
   margin-top: 5vh;
+}
+
+.plus-sign {
+  font-size: 2.9rem;
+  width: 20vw;
+}
+
+.ShowBlogs{
+  width: 100vw;
+  height:60vh;
+  background-color: #363636 ;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.blog-date{
+  text-align: right;
+}
+
+.blog-para{
+  height:30vh;
+}
+.blog-read{
+  text-align: end;
+}
+
+.google{
+  height: 80vh;
+  background-color: black;
+}
+
+.googleButton{
+  font-size: 1rem !important;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 50px;
 }

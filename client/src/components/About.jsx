@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-import i1 from "./img/About.jpg";
+import i1 from "./img/AboutMePage.jpg";
 import {
   FaFacebookF,
   FaInstagram,

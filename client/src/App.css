@@ -70,6 +70,7 @@ h2::after {
 .navbar-light .navbar-nav .nav-link.active {
   color: #fff !important;
   background-color: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 10px !important;
 }
 .nav-link:before {
   content: "";
@@ -338,3 +339,7 @@ textarea {
   width: 204px;
   height: 204px;
 } */
+
+.progress{
+  z-index: 200;
+}

@@ -2,7 +2,32 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import * as api from "../api";
 
+
 const intialValue = [];
+
+function reverseString(str) {
+  var year = "";
+  var month="";
+  var date="";
+  for (var i = 0;i >= 0; i++) { 
+    if(str==="T"){
+      break;
+    }
+    if(str[i] === undefined) {return}
+    if(str[i]==="-")
+    {
+      year=str.substring(0,i);
+      month=str.substring(i+1,i+3);
+      date=str.substring(i+4,i+6);
+      break;
+    }
+}
+
+var newString=`${date}/${month}/${year}`
+
+return newString
+
+}
 
 const BlogPage = (props) => {
   console.log("lets go");
@@ -19,11 +44,11 @@ const BlogPage = (props) => {
         console.log(error);
       });
   }, []);
-
   const src = data.selectedFile;
   const title = data.title;
   const para = data.body;
-  const date = data.date;
+  var date = reverseString(`${data.createdAt}`);
+  console.log(date);
   document.title = `${data.title} - Blogs`;
 
   return (

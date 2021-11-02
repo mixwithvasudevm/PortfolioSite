@@ -16,14 +16,23 @@ const BlogCard = (props) => {
         <Col className="d-flex align-items-center justify-content-center">
           <img src={src} alt="" className="blog-img" />
         </Col>
-        <Col className=" mt-3 pt-4">
+        <Col className=" mt-4">
+          <Row>
+            <Col>
           <h3>{title}</h3>
-          <p>
-            {para}, {date}
-          </p>
-          <p>
+          </Col>
+          <Col className="blog-date">
+          {date}
+          </Col>
+          </Row>
+          <Row>
+            <Col className="blog-para">
+            {para}
+          </Col>
+          </Row>
+          <Row className="blog-read">
             <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
-          </p>
+          </Row>
         </Col>
       </Row>
     </Container>

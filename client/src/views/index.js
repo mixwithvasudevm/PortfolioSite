@@ -7,4 +7,5 @@ export { default as SignIn } from "./SignIn";
 export { default as Contact } from "./Contact";
 export { default as Faq} from "./Faq";
 export { default as AboutPageView } from "./AboutPageView";
+export { default as YouTube} from "./YouTube";
 

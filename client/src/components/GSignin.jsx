@@ -11,9 +11,12 @@ import {
 const Goin = (props) => {
   const history = useHistory();
 
+
+
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
     const token = res?.tokenId;
+    console.log(result);
     try {
       api
       .confirmUser(result)
@@ -29,7 +32,7 @@ const Goin = (props) => {
       })
       .catch((error) => {
         console.log(error);
-        history.push("/blogs/add");
+        history.push("/blogs");
       });
     } catch (error) {
       console.log(error);
@@ -41,7 +44,7 @@ const Goin = (props) => {
   return (
     <Container className="mt-5">
       <Row className="mt-5">
-        <Col className="mt-5">
+        <Col className="mt-5 mb-5 google d-flex align-items-center justify-content-center">
         <GoogleLogin
                   clientId="978393666589-suvptocpcnnokdhtdrof76hc1tuk876e.apps.googleusercontent.com"
                   render={(renderProps) => (
@@ -53,7 +56,7 @@ const Goin = (props) => {
                       startIcon={<BsGoogle />}
                       variant="contained"
                     >
-                      Google
+                     Sign in with Google
                     </Button>
                   )}
                   onSuccess={googleSuccess}

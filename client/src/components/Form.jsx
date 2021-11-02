@@ -36,6 +36,7 @@ const Form = () => {
       .then((response) => {
         setTitle(null);
         setBody(initialValue);
+        setSelectedFile(initialValue);
         history.push("/blogs");
       })
       .catch((error) => {
@@ -45,7 +46,7 @@ const Form = () => {
   };
 
   return (
-    <div className="ShowBlogs mt-5 mx-lg-4 mb-5">
+    <div className=" mt-5 mx-lg-4 mb-5">
       <Container className="ml-5 mr-5 ">
         <Row className="mb-5">
           <Col className="mt-5 d-flex align-items-center justify-content-center h1">

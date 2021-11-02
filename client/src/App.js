@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React  from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -7,9 +7,11 @@ import {
 } from "react-router-dom";
 import { Header, Footer } from "./components";
 import BlogPage from "./views/BlogPage";
-import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView ,Contact, Faq} from "./views";
+import * as api from "./api";
+import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView ,Contact, Faq,YouTube} from "./views";
 
 function App() {
+
   return (
     <div className="App">
       <Router>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/students" exact component={Students} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/faq" exact component={Faq} />
+          <Route path="/youtube" exact component={YouTube} />
           <Route path="/about" exact component={AboutPageView} />
         </Switch>
         <Footer />
