@@ -11,15 +11,17 @@ const BlogCard = (props) => {
   const date = props.date;
   console.log({ title });
   return (
-    <Container className="blog-card full-container mb-5 shadow bg-white rounded">
+    <Container className="blog-card full-container mb-5 shadow bg-white rounded p-2">
       <Row className={`flex-column flex-md-row`}>
-        <Col className="d-flex align-items-center justify-content-center">
+        <Col className="d-flex align-items-center justify-content-center ">
           <img src={src} alt="" className="blog-img" />
         </Col>
-        <Col className=" mt-4">
+      </Row>
+        <Row>
+        <Col className=" mt-5">
           <Row>
             <Col>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
           </Col>
           <Col className="blog-date">
           {date}

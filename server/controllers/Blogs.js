@@ -16,7 +16,7 @@ export const getPosts = async (req, res) => {
   const { page } = req.query;
 
   try {
-    const LIMIT = 4;
+    const LIMIT = 2;
     // Get the starting index of every page
     const startIndex = (Number(page) - 1) * LIMIT;
     const total = await Blog.countDocuments({});
@@ -76,6 +76,5 @@ export const deletePost = async (req, res) => {
     return res.status(404).send("No post with that id");
 
   await Blog.findByIdAndRemove(id);
-
-  res.json({ message: "Post deleted successfully" });
+  res.status(200).send("okay");
 };

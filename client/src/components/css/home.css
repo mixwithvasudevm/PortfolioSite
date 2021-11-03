@@ -128,3 +128,12 @@
   font-size: 1.8rem;
   font-weight: 700;
 }
+
+.album-sub-head{
+ color: #ffd500;
+}
+
+.album-name{
+  cursor: pointer;
+ 
+}

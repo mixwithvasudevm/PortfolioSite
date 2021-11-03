@@ -6,6 +6,7 @@ const Player= (props) => {
 
 const url=props.url;
 const cls=props.cls;
+const clean=props.clean;
   return (
     <div className={`${cls}`}>
             <ReactPlayer

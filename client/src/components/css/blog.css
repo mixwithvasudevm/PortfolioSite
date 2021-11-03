@@ -3,14 +3,13 @@
 }
 
 .blog-card {
-  height: 50vh;
-  width: 75vw;
+  height: fit-content;
+  width: 33vw;
 }
 
 .blog-img {
-  width: 25vw;
-  height: 40vh;
-  margin-top: 5vh;
+  width: 29vw;
+  height: 35vh;
 }
 
 .plus-sign {
@@ -31,10 +30,28 @@
 }
 
 .blog-para{
-  height:30vh;
+  height:fit-content;
 }
 .blog-read{
   text-align: end;
+}
+
+.blog-cont{
+  position: relative;
+}
+
+.delete-button{
+  position:absolute;
+  top:0%;
+  left:13.5%;
+  background-color: black !important;
+  color: #fff !important;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.delete-button:hover{
+  color: #FF0000 !important;
 }
 
 .google{
@@ -47,4 +64,19 @@
   width: 20vw;
   height: 10vh;
   border-radius: 50px;
+}
+
+
+.event-page-heading{
+   background-image: url;
+}
+
+.event-page-heading img{
+  width: 70vw;
+  height: 70vh;
+}
+
+.event-page-heading .heading{
+  color: #fff;
+
 }

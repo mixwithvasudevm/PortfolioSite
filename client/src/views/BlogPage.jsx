@@ -52,8 +52,8 @@ const BlogPage = (props) => {
   document.title = `${data.title} - Blogs`;
 
   return (
-    <Container className="mt-5 mb-5 events-page">
-      <Row className="d-flex align-items-center justify-content-center">
+    <Container fluid className="mt-5 mb-5 events-page">
+      <Row className="d-flex align-items-center justify-content-center event-page-heading">
         <Col
           xs="12"
           lg="9"
@@ -62,14 +62,18 @@ const BlogPage = (props) => {
         >
           <img className="events-page-image" src={src} alt={title} />
         </Col>
+        <Col className="heading">
+        <h1 >{title}</h1>
+        </Col>
       </Row>
-
+      <Row className="mt-5 d-flex align-items-center justify-content-center">
+        <Col className="text-right" xs="12" lg="9" xl="8">
+          <p className="mt-4 content">{date}</p>
+        </Col>
+      </Row>
       <Row className="mt-5 d-flex align-items-center justify-content-center">
         <Col className="text-center" xs="12" lg="9" xl="8">
-          <h1 className="heading">{title}</h1>
-
           <p className="mt-4  content">{para}</p>
-          <p className="mt-4 content">{date}</p>
         </Col>
       </Row>
       <Row className="mt-5 d-flex align-items-center justify-content-center">

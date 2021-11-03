@@ -6,12 +6,14 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
+  Alert
 } from "reactstrap";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
 import ShowBlogs from "./ShowBlogs";
 import { useHistory, Link} from "react-router-dom";
 import {BsFillFileEarmarkPlusFill} from "react-icons/bs";
+import {AiFillDelete} from "react-icons/ai";
 
 const infoData = [];
 const initialValue = [];
@@ -43,6 +45,8 @@ return newString
 const BlogBody = (props) => {
   const [user,setUser]=useState(true);
   const [userId,setUserId]=useState(null);
+  const [alert, setAlert] = useState(false);
+  const [gone, setGone] = useState(null);
   const [infoData, setInfoData] = useState(initialValue);
   const [page, setPage] = useState(1);
   const history = useHistory();
@@ -56,6 +60,25 @@ const BlogBody = (props) => {
         console.log(error);
       });
   }, []);
+
+
+  const handleDelete=(index)=>{
+       const id= infoData[index]._id
+       const title=infoData[index].title;
+       api.deleteItem(id)
+       .then((res)=> {
+          if(res==="okay")
+          {
+            setGone({title});
+            setAlert(true);
+            console.log(true)
+            window.location.reload(true);
+          }
+       })
+       .catch((error)=>{
+         console.log(error);
+       })
+  };
 
   return (
     <div>
@@ -78,6 +101,12 @@ const BlogBody = (props) => {
               </Link>
             </Col>
           </Row>)}
+
+          {alert && (
+          <Row className="mt-4">
+            <Alert color="danger">{gone} is deleted</Alert>
+          </Row>
+        )}
         </Container>
       </div>
         </Row>
@@ -85,13 +114,15 @@ const BlogBody = (props) => {
           {infoData.map((item, index) => {
             
             return (
-              <Col key={index} xs="12" xl="10">
+              <Col key={index}>
+               {/* xs="12" xl="10" */}
                 {/* <Fade
                   timeout={500}
                   right={index & 1 ? true : false}
                   left={index & 1 ? false : true}
                 > */}
-                <div>
+                <Row>
+                  <Col className="blog-cont">
                   <BlogCard
                     title={item.title}
                     para={item.body}
@@ -99,7 +130,15 @@ const BlogBody = (props) => {
                     id={item._id}
                     date={reverseString(item.createdAt)}
                   />
-                </div>
+                  <a onClick={()=>handleDelete(index)} className="delete-button">
+                    <AiFillDelete/>
+                    </a>
+                  </Col>
+                 
+                  </Row>
+                  <Row >
+
+                    </Row>
                 {/* </Fade> */}
               </Col>
             );
