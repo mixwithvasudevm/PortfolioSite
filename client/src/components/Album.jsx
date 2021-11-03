@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import YouTubeMainPage from "./YouTubeMainPage";
 
 class Album extends Component {
   render() {
@@ -8,28 +9,11 @@ class Album extends Component {
         <Row className="mt-5">
           <Col className="mt-5 album-sub">New Album</Col>
         </Row>
-        <Row className="mb-5">
-          <Col className="mb-5 album-heading">Written in The Stars</Col>
+        <Row className="">
+          <Col className="album-heading">Written in The Stars</Col>
         </Row>
-        <Container className="mt-4 d-flex align-items-center justify-content-center album">
-          <Row>
-            <Col >
-            </Col>
-            <Col>
-              <Container>
-                <Row>
-                  <Col></Col>
-                  <Col>
-                    <Container>
-                      <Row>
-                        <Col></Col>
-                      </Row>
-                    </Container>
-                  </Col>
-                </Row>
-              </Container>
-            </Col>
-          </Row>
+        <Container className="d-flex align-items-center justify-content-center">
+        <YouTubeMainPage/>
         </Container>
       </Container>
     );
