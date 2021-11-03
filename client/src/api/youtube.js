@@ -8,7 +8,8 @@ export default axios.create({
         part: "snippet",
         playlistId: "UUiU0DwnFdPN4hhnq2jKlEyw",
         key: KEY,
-        maxResults: 5,
+        maxResults: 18,
+        fields: 'items(snippet/resourceId/videoId,snippet/thumbnails/medium)',
     },
     }
 )

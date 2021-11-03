@@ -343,3 +343,10 @@ textarea {
 .progress{
   z-index: 200;
 }
+
+
+.youtube-page-player{
+  width: 90vw;
+  margin-left: 5vw;
+  height: 70vh;
+}
