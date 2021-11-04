@@ -3,7 +3,7 @@ import BlogBody from "../components/BlogBody";
 
 const Blogs = () => {
   useEffect(() => {
-    document.title = "Blogs-Mix With Vasudev";
+    document.title = "Mix With Vasudev | Blogs";
   }, []);
   return (
     <div>

@@ -39,7 +39,7 @@ class AempBody extends Component {
                       </ul>
                     </Col>
                   </Row>
-                  <div className="dark-btn registernowbtn">Register Now</div>
+                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Register Now </div></a>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ class AempBody extends Component {
                       </ul>
                     </Col>
                   </Row>
-                  <div className="dark-btn registernowbtn">Register Now</div>
+                <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Register Now </div></a>
                 </div>
               </div>
             </div>

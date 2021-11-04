@@ -97,6 +97,21 @@ const YouTubePage = () => {
             />
           </Col>
         </Row>
+        <Row className="d-flex align-items-center justify-content-center mt-5 mb-5">
+          <Col className="d-flex align-items-center justify-content-center mt-5">
+            <Pagination aria-label="Page navigation example" size="sm">
+              <PaginationItem >
+                <PaginationLink onClick={()=>handlePrevious()} previous />
+              </PaginationItem>
+              <PaginationItem active>
+                <PaginationLink href="#">{page}</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink  onClick={()=>handleNext()} next />
+              </PaginationItem>
+            </Pagination>
+          </Col>
+        </Row>
         <Row lg={3} className="youtube-page-thumb">
 {user &&
   user.map((item, index) => {

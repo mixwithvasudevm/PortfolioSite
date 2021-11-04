@@ -3,7 +3,7 @@ import ContactMain from "../components/ContactMain";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact-Mix With Vasudev";
+    document.title = "Mix With Vasudev | Contact";
   }, []);
   return (
     <div>

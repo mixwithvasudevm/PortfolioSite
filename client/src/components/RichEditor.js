@@ -6,13 +6,7 @@ import { withHistory } from "slate-history";
 
 import Box from "@material-ui/core/Box";
 import FormatBoldIcon from "@material-ui/icons/FormatBold";
-import FormatItalicIcon from "@material-ui/icons/FormatItalic";
 import FormatUnderlinedIcon from "@material-ui/icons/FormatUnderlined";
-import CodeIcon from "@material-ui/icons/Code";
-import LooksOneIcon from "@material-ui/icons/LooksOne";
-import LooksTwoIcon from "@material-ui/icons/LooksTwo";
-import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
-import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import Divider from "@material-ui/core/Divider";
@@ -42,27 +36,9 @@ const RichEditor = ({ value, setValue }) => {
           <MarkButton format="bold">
             <FormatBoldIcon />
           </MarkButton>
-          <MarkButton format="italic">
-            <FormatItalicIcon />
-          </MarkButton>
           <MarkButton format="underline">
             <FormatUnderlinedIcon />
           </MarkButton>
-          <MarkButton format="code">
-            <CodeIcon />
-          </MarkButton>
-          <BlockButton format="heading-one">
-            <LooksOneIcon />
-          </BlockButton>
-          <BlockButton format="heading-two">
-            <LooksTwoIcon />
-          </BlockButton>
-          <BlockButton format="block-quote">
-            <FormatQuoteIcon />
-          </BlockButton>
-          <BlockButton format="numbered-list">
-            <FormatListNumberedIcon />
-          </BlockButton>
           <BlockButton format="bulleted-list">
             <FormatListBulletedIcon />
           </BlockButton>

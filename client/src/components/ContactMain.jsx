@@ -17,16 +17,18 @@ const ContactMain = () => {
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col className="contact-subheading mt-5 d-flex align-items-center justify-content-center">
-         <a href="mailto:mixwithvasudev@gmail.com" className="text-white">  <HiMailOpen/> </a> &nbsp;&nbsp;&nbsp;&nbsp;mixwithvasudev@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;
+        <Row className=" mt-5 contact-subheading d-flex align-items-center justify-content-center">
+          <Col>
+        <p className="text-left"> <a href="mailto:mixwithvasudev@gmail.com" className="text-white"> <HiMailOpen/> </a>&nbsp;&nbsp;&nbsp;mixwithvasudev@gmail.com</p> 
           </Col>
         </Row>
-        <Row>
-          <Col className="contact-subheading d-flex align-items-center justify-content-center"><a href="tel:+917011615551" className="text-white"><BsTelephoneForwardFill/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           7011-615-551</Col>
+        <Row className="contact-subheading d-flex align-items-center justify-content-center">
+          <Col  > <p className="text-left"> <a href="tel:+917011615551" className="text-white"><BsTelephoneForwardFill/></a>
+          &nbsp;&nbsp;&nbsp;7011-615-551 </p></Col>
         </Row>
-        <Row>
-          <Col className="contact-subheading d-flex align-items-center justify-content-center" ><a href="tel:+919555524892" className="text-white">&nbsp;&nbsp;&nbsp;<BsTelephoneForwardFill/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9555-524-892&nbsp;&nbsp;&nbsp;&nbsp;</Col>
+        <Row className="contact-subheading d-flex align-items-center justify-content-center">
+          <Col ><p className="text-left"><a href="tel:+919555524892" className="text-white"><BsTelephoneForwardFill/></a>&nbsp;&nbsp;&nbsp;9555-524-892</p></Col>
+        </Row>
         </Row>
       </Container>
     </div>

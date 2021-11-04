@@ -103,13 +103,18 @@
 }
 .dark-btn:hover {
   background-color: #f559a4 !important;
-  border: 0px solid #000 !important;
+  border: 3px solid #fff !important;
   color: #fff !important;
+  
 }
 .dark-btn:active,
 .dark-btn:focus {
   box-shadow: none !important;
   border: none;
+}
+
+.button-large{
+  font-size: 1rem !important;
 }
 
 .album {

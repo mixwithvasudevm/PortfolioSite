@@ -12,15 +12,13 @@ const Home =() => {
 
 
     useEffect(() => {
-      document.title = "Home-Mix With Vasudev";
+      document.title = "Mix With Vasudev | Home";
     }, []);
     return (
       <div className="Home">
         <Landing />
         <Album />
         <Ytext />
-        <About />
-        <YouTube />
         <Guest />
         <Contact />
       </div>

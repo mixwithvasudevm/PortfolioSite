@@ -3,7 +3,7 @@ import Faq from "../components/Faq";
 
 const FaqMain = () => {
   useEffect(() => {
-    document.title = "FAQ-Mix With Vasudev";
+    document.title = "Mix With Vasudev | FAQ";
   }, []);
   return (
     <div>

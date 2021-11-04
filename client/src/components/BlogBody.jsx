@@ -87,7 +87,7 @@ const BlogBody = (props) => {
         <div className="mb-5">
         <Container className="full-container">
           <Row className="mb-5 ShowBlogs d-flex align-items-center justify-content-center h1">
-              Our Blogs
+            Blogs
           </Row>
           {/*  <Row> we Show ShowBlogs here   </Row>*/}
           {/*  <Row> we Show ShowBlogs here   </Row>*/}

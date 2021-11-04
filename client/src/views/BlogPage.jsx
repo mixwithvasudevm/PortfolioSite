@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import * as api from "../api";
+import beats from "../components/img/beats.jpg";
 
 
 const intialValue = [];
@@ -52,38 +53,47 @@ const BlogPage = (props) => {
   document.title = `${data.title} - Blogs`;
 
   return (
-    <Container fluid className="mt-5 mb-5 events-page">
+    <div>
+      <div className="blog-page-head">
+        <br/>
+        <br/> <br/> <br/> <br/>  <br/> <br/> <br/> 
+      <Container className="shadow p-4 mb-5 rounded blog-events-page">
+        <Row className="d-flex align-items-center justify-content-center">
+        <Col className="mt-3" xs="12" lg="9" xl="8">
+        <p className="font-weight-bold h2">{title}</p>
+        </Col>
+      </Row>
       <Row className="d-flex align-items-center justify-content-center event-page-heading">
         <Col
           xs="12"
           lg="9"
           xl="8"
-          className="d-flex align-items-center justify-content-center"
+          className="d-flex align-items-center justify-content-center mt-5"
         >
           <img className="events-page-image" src={src} alt={title} />
         </Col>
-        <Col className="heading">
-        <h1 >{title}</h1>
+        </Row>
+      <Row className="d-flex align-items-center justify-content-center">
+        <Col className="d-flex flex-row-reverse" xs="12" lg="9" xl="8">
+          <p className="mt-4 content text-right">{date}</p>
         </Col>
       </Row>
-      <Row className="mt-5 d-flex align-items-center justify-content-center">
-        <Col className="text-right" xs="12" lg="9" xl="8">
-          <p className="mt-4 content">{date}</p>
-        </Col>
-      </Row>
-      <Row className="mt-5 d-flex align-items-center justify-content-center">
-        <Col className="text-center" xs="12" lg="9" xl="8">
-          <p className="mt-4  content">{para}</p>
+      <Row className=" d-flex align-items-center justify-content-center">
+        <Col className="mt-5" xs="12" lg="9" xl="8">
+          <p className="mt-4">{para}</p>
         </Col>
       </Row>
       <Row className="mt-5 d-flex align-items-center justify-content-center">
         <Col xs="12" lg="9" xl="8">
-          <h5>
+          <p>
             <a href="/blogs">Back</a>
-          </h5>
+          </p>
         </Col>
       </Row>
     </Container>
+      </div>
+   
+    </div>
   );
 };
 

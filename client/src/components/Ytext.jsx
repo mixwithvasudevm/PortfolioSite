@@ -19,15 +19,7 @@ class Ytext extends Component {
             className="d-flex align-items-center justify-content-center"
             xs="2"
           >
-            <Link to="/youtube" className="dark-btn">
-              YOUTUBE
-            </Link>
-          </Col>
-          <Col
-            className="d-flex align-items-center justify-content-center"
-            xs="2"
-          >
-            <Link to="/aemp" className="dark-btn">
+            <Link to="/aemp" className="dark-btn button-large">
               AEMP COURSES
             </Link>
           </Col>

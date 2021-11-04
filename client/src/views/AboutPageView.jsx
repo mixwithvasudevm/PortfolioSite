@@ -1,16 +1,18 @@
-import React, { Component } from "react";
+import React, { Component,useEffect } from "react";
 
 
  import AboutPage from "../components/AboutPage";
 
-class AboutPageView extends Component {
-  render() {
+const AboutPageView =()=>{
+  
+    useEffect(() => {
+      document.title = "Mix With Vasudev | About";
+    }, []);
     return (
       <div>
      <AboutPage/>     
       </div>
     );
-  }
 }
 
 export default AboutPageView;

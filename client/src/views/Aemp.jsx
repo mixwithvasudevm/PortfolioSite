@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Component,useEffect } from "react";
 
  import AempHead from "../components/AempHead";
  import AempBody from "../components/AempBody";
 
-class Aemp extends Component {
-  render() {
+const Aemp =() => {
+  useEffect(() => {
+    document.title = "Mix With Vasudev | AEMP";
+  }, []);
     return (
       <div>
        <AempHead /> 
@@ -12,6 +14,5 @@ class Aemp extends Component {
       </div>
     );
   }
-}
 
 export default Aemp;

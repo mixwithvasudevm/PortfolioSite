@@ -40,6 +40,20 @@
   position: relative;
 }
 
+
+.blog-page-head{
+  width: 100vw;
+  height: fit-content;
+  background-image: url(../img/beats.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
+.blog-events-page{
+  background-color: #fff;
+}
+
+
 .delete-button{
   position:absolute;
   top:0%;
