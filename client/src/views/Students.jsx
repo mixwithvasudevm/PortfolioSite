@@ -5,7 +5,7 @@ import React, { Component,useEffect } from "react";
 
 const Students=()=>{
   useEffect(() => {
-    document.title = "Mix With Vasudev | Sudent Work";
+    document.title = "Mix With Vasudev | Student Work";
   }, []);
     return (
       <div>

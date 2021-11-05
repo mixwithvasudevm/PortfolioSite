@@ -14,6 +14,7 @@ export const getPost = async (req, res) => {
 
 export const getPosts = async (req, res) => {
   const { page } = req.query;
+  console.log(req.query);
 
   try {
     const LIMIT = 2;
