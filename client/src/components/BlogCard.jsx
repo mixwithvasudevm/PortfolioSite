@@ -2,15 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import {AiOutlineArrowRight} from "react-icons/ai";
+import parse from 'html-react-parser';
+const BlogCard = ({title,id,para,src,date}) => {
 
-const BlogCard = (props) => {
-  const title = props.title;
-  const id = props.id;
-  const para = props.para;
-  const src = props.src;
-  const date = props.date;
   console.log({ title });
   return (
+    
     <Container className="blog-card full-container mb-5 shadow bg-white rounded p-2">
       <Row className={`flex-column flex-md-row`}>
         <Col className="d-flex align-items-center justify-content-center ">
@@ -29,7 +26,7 @@ const BlogCard = (props) => {
           </Row>
           <Row>
             <Col className="blog-para">
-            {para}
+             {parse(para)}
           </Col>
           </Row>
           <Row className="blog-read">
