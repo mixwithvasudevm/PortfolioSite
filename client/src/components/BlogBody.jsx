@@ -156,9 +156,10 @@ const BlogBody = (props) => {
               {load&&
               <Row>
                 <Col className="d-flex align-items-center justify-content-center h4">
-                  <p className="text-weight-bold">
+                  {/* <p className="text-weight-bold">
                 Content is loading please wait .....
-                </p>
+                </p> */}
+                <div className="loader"></div>
                 </Col>
                 </Row>
 }

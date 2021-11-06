@@ -17,7 +17,7 @@ export const getPosts = async (req, res) => {
   console.log(req.query);
 
   try {
-    const LIMIT = 2;
+    const LIMIT = 6;
     // Get the starting index of every page
     const startIndex = (Number(page) - 1) * LIMIT;
     const total = await Blog.countDocuments({});

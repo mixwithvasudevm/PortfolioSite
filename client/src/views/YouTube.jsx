@@ -3,7 +3,7 @@ import YouTubePage from "../components/YouTubePage";
 
 const YouMain = () => {
   useEffect(() => {
-    document.title = "Mix With Vasudev | Youtube";
+    document.title = "Mix With Vasudev";
   }, []);
   return (
     <div>
