@@ -9,6 +9,12 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth2';
 import dotenv from "dotenv";
 
 const app = express();
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://priceless-raman-2d8bb2.netlify.app/");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 dotenv.config();
 
 app.use(express.json({ limit: "30mb", extended: true }));
