@@ -154,7 +154,7 @@ const BlogBody = (props) => {
       <Modal isOpen={isOpen} toggle={toggle}>
         <ModalHeader toggle={toggle} close={<button className="close" onClick={()=>toggle(null)}>×</button>}
 >
-          do you wants to delete "{gone}"
+          Do you wants to Delete "{gone}"
         </ModalHeader>
         <ModalBody >
           <Row>

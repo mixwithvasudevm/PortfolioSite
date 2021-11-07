@@ -11,6 +11,7 @@ import {
 class About extends Component {
   render() {
     return (
+     
       <div>
         <Container className="mt-5 full-container mb-5">
           <Row>
