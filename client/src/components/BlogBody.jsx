@@ -6,7 +6,12 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
-  Alert,
+  UncontrolledAlert,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
@@ -14,6 +19,7 @@ import ShowBlogs from "./ShowBlogs";
 import { useHistory, Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
+
 
 const infoData = [];
 const initialValue = [];
@@ -48,6 +54,20 @@ const BlogBody = (props) => {
   const [infoData, setInfoData] = useState(initialValue);
   const [page, setPage] = useState(1);
   const [load,setLoad]= useState(true);
+  const [isOpen, setOpen ] = useState(false);
+  const [ del, setDel] = useState(null);
+
+  const toggle = (index) => {
+    if(index!==null)
+    {
+    console.log(index);
+    setDel(index);
+    const title = infoData[index].title;
+    setGone(title)
+    }
+
+    setOpen(!isOpen);
+  };
   const history = useHistory();
   useEffect(() => {
     api
@@ -76,8 +96,6 @@ const BlogBody = (props) => {
       api
         .fetchItems(page + 1)
         .then((res) => {
-          console.log(res.data.data, "next");
-          console.log(res.data.currentPage, "next");
           setInfoData(res.data.data);
           setPage(current + 1);
           setLoad(false);
@@ -98,8 +116,6 @@ const BlogBody = (props) => {
         api
           .fetchItems(page - 1)
           .then((res) => {
-            console.log(res.data.data, "previous");
-            console.log(res.data.currentPage, "previous");
             setInfoData(res.data.data);
             setPage(current - 1);
             setLoad(false);
@@ -114,29 +130,19 @@ const BlogBody = (props) => {
     }
   };
 
-  const handleDelete = (index) => {
-    const id = infoData[index]._id;
-    const title = infoData[index].title;
+  const handleDelete = async() => {
+    console.log(del);
+    const id = infoData[del]._id;
     setLoad(true);
     setUser(false);
     api
       .deleteItem(id)
       .then((res) => {
-        if (res === "okay") {
-          api
-          .fetchItems(page)
-          .then((res) => {
-            setInfoData(res.data.data);
+        console.log(res);
+        if (res.data === "okay") {
             setLoad(false);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-          setGone({ title });
-          setAlert(true);
-         
-          setLoad(false);
-          setUser(true);
+            setAlert(true);
+            toggle(null);
         }
       })
       .catch((error) => {
@@ -147,6 +153,23 @@ const BlogBody = (props) => {
   return (
     <div>
       <Container className="mt-5 full-container">
+      <Modal isOpen={isOpen} toggle={toggle}>
+        <ModalHeader toggle={toggle} close={<button className="close" onClick={()=>toggle(null)}>×</button>}
+>
+          do you wants to delete "{gone}"
+        </ModalHeader>
+        <ModalBody >
+          <Row>
+            <Col className=" d-flex align-items-center justify-content-center">
+              <Button color="danger"  onClick={() => handleDelete(del)}>Yes</Button>
+            </Col>
+            <Col className=" d-flex align-items-center justify-content-center">
+              <Button color="success"  onClick={() => toggle(null)}>No</Button>
+            </Col>
+            </Row>
+        
+        </ModalBody>
+      </Modal>
         <Row>
           <div className="mb-5">
             <Container className="full-container">
@@ -167,7 +190,6 @@ const BlogBody = (props) => {
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>...*/}
-              {!load&& (
                 <Row>
                   <Col className="d-flex  justify-content-center plus-sign ">
                     <Link to="/auth">
@@ -175,16 +197,16 @@ const BlogBody = (props) => {
                     </Link>
                   </Col>
                 </Row>
-              )}
 
-              {alert && (
+                 {alert && (
                 <Row className="mt-4">
-                  <Alert color="danger">{gone} is deleted</Alert>
+                  <UncontrolledAlert color="danger">"{gone}" is deleted</UncontrolledAlert>
                 </Row>
-              )}
+                )}
             </Container>
           </div>
         </Row>
+        {!load&& (
         <Row className="d-flex align-items-center justify-content-center">
           {infoData.map((item, index) => {
             return (
@@ -205,7 +227,7 @@ const BlogBody = (props) => {
                       date={reverseString(item.createdAt)}
                     />
                     <a
-                      onClick={() => handleDelete(index)}
+                      onClick={() => toggle(index)}
                       className="delete-button"
                     >
                       <AiFillDelete />
@@ -218,6 +240,7 @@ const BlogBody = (props) => {
             );
           })}
         </Row>
+         )}
         <Row className="d-flex align-items-center justify-content-center mt-5 mb-5">
           <Col className="d-flex align-items-center justify-content-center mt-5">
             <Pagination aria-label="Page navigation example" size="sm">
