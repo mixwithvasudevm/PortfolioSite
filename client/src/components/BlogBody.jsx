@@ -14,7 +14,7 @@ import ShowBlogs from "./ShowBlogs";
 import { useHistory, Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
-
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 
 const infoData = [];
 const initialValue = [];
@@ -204,6 +204,7 @@ const BlogBody = (props) => {
                       id={item._id}
                       date={reverseString(item.createdAt)}
                     />
+                    
                     <a
                       onClick={() => handleDelete(index)}
                       className="delete-button"
