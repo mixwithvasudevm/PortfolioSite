@@ -11,7 +11,7 @@ const BlogCard = ({title,id,para,src,date}) => {
     <Container className="blog-card full-container mb-5 shadow bg-white rounded p-2">
       <Row className={`flex-column flex-md-row`}>
         <Col className="d-flex align-items-center justify-content-center ">
-          <img src={src} alt="" className="blog-img" />
+          <img src={src} alt="blog image" className="blog-img" />
         </Col>
       </Row>
         <Row>
@@ -24,11 +24,11 @@ const BlogCard = ({title,id,para,src,date}) => {
           {date}
           </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col className="blog-para">
              {parse(para)}
           </Col>
-          </Row>
+          </Row> */}
           <Row className="blog-read">
             <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
           </Row>
@@ -37,5 +37,6 @@ const BlogCard = ({title,id,para,src,date}) => {
     </Container>
   );
 };
+
 
 export default BlogCard;

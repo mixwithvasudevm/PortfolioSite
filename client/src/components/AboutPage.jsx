@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import i1 from "./img/main.jpg";
 import i2 from "./img/AboutMePage.jpg";
-import i3 from "./img/z.jpg";
-import i4 from "./img/jo.jpg";
-import i5 from "./img/ha.jpg";
-import i6 from "./img/tvf.jpg";
-import i7 from "./img/ab.jpg";
+
 import Player from "./YoutubePlayer";
 class AboutPage extends Component {
   render() {

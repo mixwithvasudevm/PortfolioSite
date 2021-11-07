@@ -12,8 +12,8 @@ class AempBody extends Component {
               <div className="card pricing-card pricing-card-highlighted  pricing-plan-pro">
                 <div className="card-body">
                   <i className="mdi mdi-trophy pricing-plan-icon"></i>
-                  <p className="pricing-plan-title">3-MONTH ONLINE COURSE</p>
-                  <p>(TWICE A WEEK)</p>
+                  <p className="pricing-plan-title">MIXING & MASTERING COURSE</p>
+                  <p>(ONLINE)</p>
                   <h4 className="pricing-plan-cost ml-auto ">
                     Rs. 40,000/- + GST
                   </h4>
@@ -47,14 +47,14 @@ class AempBody extends Component {
               <div className="card pricing-card pricing-card-highlighted pricing-plan-basic">
                 <div className="card-body">
                   <i className="mdi mdi-cube-outline pricing-plan-icon"></i>
-                  <p className="pricing-plan-title">6-MONTH ONLINE COURSE</p>
-                  <p>(TWICE A WEEK)</p>
+                  <p className="pricing-plan-title">AEMP COURSES</p>
+                  <p>(ONLINE)</p>
                   <h4 className="pricing-plan-cost ml-auto mb-1">
                     Rs. 85,000/- + GST
                   </h4>
-                  <p className="pricing-plan-title mt-0 mb-4 text-danger">
+                  {/* <p className="pricing-plan-title mt-0 mb-4 text-danger">
                     (Rockschool, London Affiliated)
-                  </p>
+                  </p> */}
                   <Row>
                     <Col>
                       <ul className="pricing-plan-features pricingli">
@@ -80,13 +80,55 @@ class AempBody extends Component {
                         <li>Guest Lecture By Industry Professionals</li>
                       </ul>
                     </Col>
+                    
                   </Row>
                 <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Register Now </div></a>
                 </div>
               </div>
             </div>
+            {/*  */}
+              <div className="col-md-4 thirdprice">
+              <div className="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+                <div className="card-body">
+                  <i className="mdi mdi-trophy pricing-plan-icon"></i>
+                  <p className="pricing-plan-title">OFFLINE COURSE</p>
+                  <p>(Coming Soon!)</p>
+                    <h4 className="pricing-plan-cost ml-auto mb-1">
+                    Launching Soon
+                  </h4>
+                  <Row>
+                 
+                     <Col>
+                      <ul className="pricing-plan-features pricingli">
+                        <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                      </ul>
+                    </Col>
+                    <Col>
+                      <ul className="pricing-plan-features pricingli">
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                         <li></li>      <br/>
+                        <li></li>      <br/>
+                      </ul>
+                    </Col>
+                   
+                  </Row>
+                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Know More </div></a>
+                </div>
+              </div>
+            </div>
+            {/*  */}
           </div>
+           <br/><br/>
           <div className="d-flex align-items-center justify-content-center">
+         
           <iframe
             scrolling="no"
             className="map-cont"

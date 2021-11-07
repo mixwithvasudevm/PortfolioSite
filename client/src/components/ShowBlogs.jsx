@@ -31,10 +31,6 @@ const ShowBlogs =() =>{
           <Row className="mb-5 ShowBlogs d-flex align-items-center justify-content-center h1">
               Our Blogs
           </Row>
-          {/*  <Row> we Show ShowBlogs here   </Row>*/}
-          {/*  <Row> we Show ShowBlogs here   </Row>*/}
-          {/*  <Row> we Show ShowBlogs here   </Row>*/}
-          {/*  <Row> we Show ShowBlogs here   </Row>...*/}
         { !user&& (<Row>
            <Col className="d-flex  justify-content-center plus-sign ">
               
