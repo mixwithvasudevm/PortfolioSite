@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-  FaFacebookF,
+  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaLinkedin,
@@ -11,16 +11,16 @@ class Platform extends Component {
     return (
       <div className="audio-platform">
         <div className="spotify  d-flex align-items-center justify-content-center">
-          <FaFacebookF />
+         <a href=" https://twitter.com/MixWithVasudev?s=20" className="text-white"><FaTwitter /></a>
         </div>
         <div className="itune  d-flex align-items-center justify-content-center">
-          <FaInstagram />
+         <a href=" https://instagram.com/mixwithvasudev?utm_medium=copy_link" className="text-white"><FaInstagram /></a>
         </div>
         <div className="youtube  d-flex align-items-center justify-content-center">
-          <FaYoutube />
+          <a href=" https://youtube.com/c/MixWithVasudev" className="text-white"><FaYoutube /></a>
         </div>
         <div className="soundcloud  d-flex align-items-center justify-content-center">
-          <FaLinkedin />
+         <a href=" https://www.linkedin.com/in/mix-with-vasudev" className="text-white"><FaLinkedin /></a>
         </div>
       </div>
     );
