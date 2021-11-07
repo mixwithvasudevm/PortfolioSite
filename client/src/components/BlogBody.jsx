@@ -19,7 +19,7 @@ import ShowBlogs from "./ShowBlogs";
 import { useHistory, Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
+
 
 const infoData = [];
 const initialValue = [];
@@ -156,7 +156,7 @@ const BlogBody = (props) => {
       <Modal isOpen={isOpen} toggle={toggle}>
         <ModalHeader toggle={toggle} close={<button className="close" onClick={()=>toggle(null)}>×</button>}
 >
-          do you wants to delete "{gone}"
+          Do you wants to Delete "{gone}"
         </ModalHeader>
         <ModalBody >
           <Row>

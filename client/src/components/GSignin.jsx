@@ -46,7 +46,7 @@ const Goin = (props) => {
       <Row className="mt-5">
         <Col className="mt-5 mb-5 google d-flex align-items-center justify-content-center">
         <GoogleLogin
-                  clientId="978393666589-suvptocpcnnokdhtdrof76hc1tuk876e.apps.googleusercontent.com"
+                  clientId={process.env.REACT_APP_GCLIENT}
                   render={(renderProps) => (
                     <Button
                       className="googleButton"
