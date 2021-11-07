@@ -24,11 +24,11 @@ const BlogCard = ({title,id,para,src,date}) => {
           {date}
           </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col className="blog-para">
              {parse(para)}
           </Col>
-          </Row>
+          </Row> */}
           <Row className="blog-read">
             <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
           </Row>
