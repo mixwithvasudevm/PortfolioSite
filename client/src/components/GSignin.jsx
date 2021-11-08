@@ -24,6 +24,7 @@ const Goin = (props) => {
         console.log(response);
         if(response.data==="okay")
         {
+          sessionStorage.setItem("googleId",result.googleId);
         history.push("/blogs/add");
         }
         else if(response.data==="not okay"){ 

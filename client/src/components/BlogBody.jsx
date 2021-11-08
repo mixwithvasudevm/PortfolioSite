@@ -19,7 +19,6 @@ import ShowBlogs from "./ShowBlogs";
 import { useHistory, Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap';
 
 const infoData = [];
 const initialValue = [];
@@ -47,7 +46,7 @@ function reverseString(str) {
 }
 
 const BlogBody = (props) => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   const [userId, setUserId] = useState(null);
   const [alert, setAlert] = useState(false);
   const [gone, setGone] = useState(null);
@@ -79,6 +78,8 @@ const BlogBody = (props) => {
       .catch((error) => {
         console.log(error);
       });
+
+      checkUser();
   }, []);
 
   const handleNext = async () => {
@@ -108,6 +109,32 @@ const BlogBody = (props) => {
     }
   };
 
+  const checkUser = async (res) => {
+    const result ={ googleId:sessionStorage.getItem('googleId')};
+    console.log(result);
+    try {
+      api
+      .confirmUser(result)
+      .then((response) => {
+        console.log(response);
+        if(response.data==="okay")
+        {
+          setUser(true);
+          console.log(user)
+        }
+        else if(response.data==="not okay"){ 
+           setUser(false);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   const handlePrevious = () => {
     try {
       const current = page;
@@ -134,7 +161,6 @@ const BlogBody = (props) => {
     console.log(del);
     const id = infoData[del]._id;
     setLoad(true);
-    setUser(false);
     api
       .deleteItem(id)
       .then((res) => {
@@ -153,7 +179,7 @@ const BlogBody = (props) => {
   return (
     <div>
       <Container className="mt-5 full-container">
-      <Modal isOpen={isOpen} toggle={toggle}>
+    { user&&<Modal isOpen={isOpen} toggle={toggle}>
         <ModalHeader toggle={toggle} close={<button className="close" onClick={()=>toggle(null)}>×</button>}
 >
           do you wants to delete "{gone}"
@@ -169,7 +195,7 @@ const BlogBody = (props) => {
             </Row>
         
         </ModalBody>
-      </Modal>
+      </Modal> }
         <Row>
           <div className="mb-5">
             <Container className="full-container">
@@ -190,13 +216,13 @@ const BlogBody = (props) => {
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>...*/}
-                <Row>
+              {user && <Row>
                   <Col className="d-flex  justify-content-center plus-sign ">
                     <Link to="/auth">
                       <BsFillFileEarmarkPlusFill />
                     </Link>
                   </Col>
-                </Row>
+                </Row> }
 
                  {alert && (
                 <Row className="mt-4">
@@ -227,12 +253,12 @@ const BlogBody = (props) => {
                       date={reverseString(item.createdAt)}
                     />
                     
-                    <a
+                { user&& <a
                       onClick={() => toggle(index)}
                       className="delete-button"
                     >
                       <AiFillDelete />
-                    </a>
+                    </a> }
                   </Col>
                 </Row>
                 <Row></Row>
