@@ -10,7 +10,7 @@ import {
 import youtube from "../api/youtube";
 import Player from "./YoutubePlayer";
 
-const intialValue = [{}];
+
 
 const YouTubePage = () => {
   const [user, setUser] = useState(null);
@@ -19,8 +19,7 @@ const YouTubePage = () => {
   const [load,setLoad]= useState(true);
   const [play, setPlay] = useState("");
   const [previous, setPrevious] = useState(null);
-  var video;
-  var video;
+
   useEffect(() => {
     fetchData();
   }, []);
