@@ -16,14 +16,14 @@ const app = express();
 //   next();
 // });
 dotenv.config();
-
+app.use(passport.initialize());
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 // app.use(cors({"origin": "https://priceless-raman-2d8bb2.netlify.app"}));
-app.use(cors());
-app.use(passport.initialize());
-app.use("/blogs", blogRoutes);
-app.use("/auth/google", userRoutes);
+app.options("*", cors());
+
+app.use("/blogs",cors(), blogRoutes);
+app.use("/auth/google",cors(), userRoutes);
 
 
 const PORT = process.env.PORT || 5000;
