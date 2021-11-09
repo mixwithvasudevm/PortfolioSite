@@ -1,4 +1,4 @@
-import React, { Component,useEffect } from "react";
+import React, {useEffect } from "react";
 
  import StudentBody from "../components/StudentBody";
 //  import AempBody from "../components/AempBody";

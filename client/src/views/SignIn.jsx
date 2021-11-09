@@ -1,10 +1,7 @@
 import React,{useEffect} from "react";
 import Goin from "../components/GSignin";
-import * as api from "../api";
-import { useHistory, Link} from "react-router-dom";
 
 const Auth = () => {
-  const history = useHistory();
   useEffect(() => {
     // let userId= sessionStorage.getItem('id');
     // console.log(userId);

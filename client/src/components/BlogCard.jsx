@@ -2,10 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import {AiOutlineArrowRight} from "react-icons/ai";
-import parse from 'html-react-parser';
 const BlogCard = ({title,id,para,src,date}) => {
 
-  console.log({ title });
   return (
     
     <Container className="blog-card full-container mb-5 shadow bg-white rounded p-2">

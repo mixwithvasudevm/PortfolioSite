@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
-import { Container, Row, Col } from "reactstrap";
 import { Toast, ToastBody, ToastHeader, Collapse } from "reactstrap";
 
 const FaqCard = (props) => {

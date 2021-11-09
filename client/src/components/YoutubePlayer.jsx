@@ -1,12 +1,10 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
-import { Container, Row, Col } from "reactstrap";
 
 const Player= (props) => {
 
 const url=props.url;
 const cls=props.cls;
-const clean=props.clean;
   return (
     <div className={`${cls}`}>
             <ReactPlayer

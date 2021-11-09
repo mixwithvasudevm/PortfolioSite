@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/contact.css";
 import { Container, Row, Col } from "reactstrap";
 import {HiMailOpen} from "react-icons/hi";
 import {BsTelephoneForwardFill} from "react-icons/bs";
-import {AiFillCopy} from "react-icons/ai";
 
 const ContactMain = () => {
- const [mail,setMail]=useState(false);
 
   return (
     <div className="contact-page mt-5">

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -8,26 +8,26 @@ import {
   PaginationLink,
 } from "reactstrap";
 import youtube from "../api/youtube";
-import youtubePage from "../api/youtubePage"
 import Player from "./YoutubePlayer";
-import mix from "../components/img/mix.png";
 
-const intialValue = [{}];
+
 
 const YouTubePage = () => {
   const [user, setUser] = useState(null);
   const [url, setUrl] = useState("");
   const [page, setPage] = useState(1);
-  const [play,setPlay]= useState("");
-  var video;
+  const [load,setLoad]= useState(true);
+  const [play, setPlay] = useState("");
+  const [previous, setPrevious] = useState(null);
+
   useEffect(() => {
-    document.title = "YouTube-Mix With Vasudev";
     fetchData();
   }, []);
 
   useEffect(() => {
     if (user) {
       setUrl(user[0].snippet.resourceId.videoId);
+      setLoad(false);
     }
   }, [user]);
 
@@ -36,14 +36,12 @@ const YouTubePage = () => {
       const res = await youtube.get("");
       // console.log(res.data)
       let loginData = res.data.items;
-      let nexttoken= res.data.nextPageToken;
-      
+      let nexttoken = res.data.nextPageToken;
+
       // this will re render the view with new data
 
       setUser(loginData);
       setPlay(nexttoken);
-      //  console.log(user[0].snippet.thumbnails.high.url)
-      console.log(url);
     } catch (err) {
       console.log(err);
     }
@@ -55,40 +53,61 @@ const YouTubePage = () => {
     }
   };
 
-  const handleNext = async() => {
-    try{
-    const current = page;
-    // let playdata= await youtubePage.get(`playlistItems?&playlistId=UUiU0DwnFdPN4hhnq2jKlEyw&pageToken=${play}&key=AIzaSyASk-OtQKcCa_0qWttUn-YB5WzFReT3ThM&maxResults=9`)
-    // console.log(playdata);
-    // console.log("hello");
-    // setUser(playdata.data.items);
-    // let nexttoken= playdata.data.nextPageToken;
-      
-    // // this will re render the view with new data
-    // setPlay(nexttoken);
-    setPage(current + 1);
-    }
-    catch(err){
+  const handleNext = async () => {
+    setLoad(true);
+    console.log(play);
+    try {
+      const current = page;
+      const params={
+        "pageToken":play
+      }
+      const res = await youtube.get("",{ 
+       params
+    })
+        // console.log(res.data)
+        let loginData = res.data.items;
+        let nexttoken = res.data.nextPageToken;
+        let prev= res.data.prevPageToken;
+        // this will re render the view with new data
+        setPrevious(prev);
+        setUser(loginData);
+        setPlay(nexttoken);
+      setPage(current + 1);
+    } catch (err) {
       console.log(err);
     }
-
   };
 
-  const handlePrevious=() =>{
+  const handlePrevious = async() => {
     const current = page;
-    if(current>1)
-    {
-    setPage(current-1);
+    try{
+    if (current > 1) {
+      setLoad(true);
+      const params={
+        "pageToken":previous
+      }
+      const res = await youtube.get("",{ 
+      params
+    })
+        // console.log(res.data)
+        let loginData = res.data.items;
+        let nexttoken = res.data.nextPageToken;
+        let prev= res.data.prevPageToken;
+        // this will re render the view with new data
+        setPrevious(prev);
+        console.log(previous)
+        setUser(loginData);
+        setPlay(nexttoken);
+        setPage(current - 1);
     }
   }
+  catch(err){
+    console.log(err);
+  }
+  };
   return (
     <div>
-      <Container fluid className="mt-5 mb-2">
-        <Row className="youtube-heading text-white">
-          <Col className="d-flex align-items-center justify-content-center">
-            <img src={mix} />
-          </Col>
-        </Row>
+      <Container fluid className=" mb-2">
         <Row className="mb-5">
           <Col className="mt-5">
             <Player
@@ -100,47 +119,62 @@ const YouTubePage = () => {
         <Row className="d-flex align-items-center justify-content-center mt-5 mb-5">
           <Col className="d-flex align-items-center justify-content-center mt-5">
             <Pagination aria-label="Page navigation example" size="sm">
-              <PaginationItem >
-                <PaginationLink onClick={()=>handlePrevious()} previous />
+              <PaginationItem>
+                <PaginationLink onClick={() => handlePrevious()} previous />
               </PaginationItem>
               <PaginationItem active>
                 <PaginationLink href="#">{page}</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink  onClick={()=>handleNext()} next />
+                <PaginationLink onClick={() => handleNext()} next />
               </PaginationItem>
             </Pagination>
           </Col>
         </Row>
+        {load&&
+              <Row>
+                <Col className="d-flex align-items-center justify-content-center h4">
+                  {/* <p className="text-weight-bold">
+                Content is loading please wait .....
+                </p> */}
+                <div className="loader"></div>
+                </Col>
+                </Row>
+        }
+        {!load&&
         <Row lg={3} className="youtube-page-thumb">
-{user &&
-  user.map((item, index) => {
-    // console.log(item.snippet.resourceId.videoId)
-    // console.log(item.snippet.thumbnails.high.url)
-    return (
-      <Col className="mb-3 youtube-content" key={index}>
-        {/* {changeUrl(index)} */}
-        <Row>
-         <img src={`${item.snippet.thumbnails.medium.url}`}
-             onClick={() => setUrl(item.snippet.resourceId.videoId)} />
-      </Row>
-      <Row>
-        <Col> {`${item.snippet.title}`} </Col>
-      </Row>
-    </Col>
-   );   })}
- </Row>
+          {user &&
+            user.map((item, index) => {
+              // console.log(item.snippet.resourceId.videoId)
+              // console.log(item.snippet.thumbnails.high.url)
+              return (
+                <Col className="mb-3 youtube-content" key={index}>
+                  {/* {changeUrl(index)} */}
+                  <Row>
+                    <img
+                      src={`${item.snippet.thumbnails.medium.url}`}
+                      onClick={() => setUrl(item.snippet.resourceId.videoId)}
+                    />
+                  </Row>
+                  <Row>
+                    <Col> {`${item.snippet.title}`} </Col>
+                  </Row>
+                </Col>
+              );
+            })}
+        </Row>
+}
         <Row className="d-flex align-items-center justify-content-center mt-5">
           <Col className="d-flex align-items-center justify-content-center mt-5">
             <Pagination aria-label="Page navigation example" size="sm">
-              <PaginationItem >
-                <PaginationLink onClick={()=>handlePrevious()} previous />
+              <PaginationItem>
+                <PaginationLink onClick={() => handlePrevious()} previous />
               </PaginationItem>
               <PaginationItem active>
                 <PaginationLink href="#">{page}</PaginationLink>
               </PaginationItem>
               <PaginationItem>
-                <PaginationLink  onClick={()=>handleNext()} next />
+                <PaginationLink onClick={() => handleNext()} next />
               </PaginationItem>
             </Pagination>
           </Col>
@@ -155,19 +189,16 @@ export default YouTubePage;
 //`${item.snippet.thumbnails.high.url}`
 //onClick={setUrl(item.snippet.resourceId.videoId)}
 
-
-
-
-
-
-{/* <Row lg={3} className="youtube-page-thumb">
+{
+  /* <Row lg={3} className="youtube-page-thumb">
 {user &&
   user.map((item, index) => {
     // console.log(item.snippet.resourceId.videoId)
     // console.log(item.snippet.thumbnails.high.url)
     return (
       <Col className="mb-3 youtube-content" key={index}>
-        {/* {changeUrl(index)} */}
+        {/* {changeUrl(index)} */
+}
 //         <Row>
 //           {" "}
 //           <img

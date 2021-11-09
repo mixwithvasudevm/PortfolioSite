@@ -6,19 +6,16 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Progress
 } from "reactstrap";
 
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [navbarSolid, setNavbarSolid] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const loginToggle = () => setIsLoginOpen(!isLoginOpen);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY >= 100) setNavbarSolid(true);

@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { Header, Footer } from "./components";
 import BlogPage from "./views/BlogPage";
-import * as api from "./api";
 import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView ,Contact, Faq,YouTube} from "./views";
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
           <Route path="/blogs" exact component={Blogs} />
           <Route path="/blogs/add" exact component={Add} />
           <Route path="/blogs/:id" exact component={BlogPage} />
-          <Route path="/auth" exact component={SignIn} />
+          <Route path="/admin/auth" exact component={SignIn} />
           <Route path="/students" exact component={Students} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/faq" exact component={Faq} />

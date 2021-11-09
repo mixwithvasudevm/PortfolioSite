@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import i1 from "./img/main.jpg";
 import i2 from "./img/AboutMePage.jpg";
-
-import Player from "./YoutubePlayer";
 class AboutPage extends Component {
   render() {
     return (

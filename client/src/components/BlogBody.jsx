@@ -11,12 +11,10 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
 } from "reactstrap";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
-import ShowBlogs from "./ShowBlogs";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
 const infoData = [];
@@ -31,7 +29,7 @@ function reverseString(str) {
     if (str === "T") {
       break;
     }
-    if (j == 0 && str[i] === "-") {
+    if (j === 0 && str[i] === "-") {
       year = str.substring(0, i);
       month = str.substring(i + 1, i + 3);
       date = str.substring(i + 4, i + 6);
@@ -45,8 +43,7 @@ function reverseString(str) {
 }
 
 const BlogBody = (props) => {
-  const [user, setUser] = useState(true);
-  const [userId, setUserId] = useState(null);
+  const [user, setUser] = useState(false);
   const [alert, setAlert] = useState(false);
   const [gone, setGone] = useState(null);
   const [infoData, setInfoData] = useState(initialValue);
@@ -58,7 +55,6 @@ const BlogBody = (props) => {
   const toggle = (index) => {
     if(index!==null)
     {
-    console.log(index);
     setDel(index);
     const title = infoData[index].title;
     setGone(title)
@@ -66,7 +62,6 @@ const BlogBody = (props) => {
 
     setOpen(!isOpen);
   };
-  const history = useHistory();
   useEffect(() => {
     api
       .fetchItems(page)
@@ -77,6 +72,8 @@ const BlogBody = (props) => {
       .catch((error) => {
         console.log(error);
       });
+
+      checkUser();
   }, []);
 
   const handleNext = async () => {
@@ -106,6 +103,30 @@ const BlogBody = (props) => {
     }
   };
 
+  const checkUser = async (res) => {
+    const result ={ googleId:sessionStorage.getItem('googleId')};
+    console.log(result);
+    try {
+      api
+      .confirmUser(result)
+      .then((response) => {
+        if(response.data==="okay")
+        {
+          setUser(true);
+        }
+        else if(response.data==="not okay"){ 
+           setUser(false);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   const handlePrevious = () => {
     try {
       const current = page;
@@ -132,11 +153,9 @@ const BlogBody = (props) => {
     console.log(del);
     const id = infoData[del]._id;
     setLoad(true);
-    setUser(false);
     api
       .deleteItem(id)
       .then((res) => {
-        console.log(res);
         if (res.data === "okay") {
             setLoad(false);
             setAlert(true);
@@ -151,7 +170,7 @@ const BlogBody = (props) => {
   return (
     <div>
       <Container className="mt-5 full-container">
-      <Modal isOpen={isOpen} toggle={toggle}>
+    { user&&<Modal isOpen={isOpen} toggle={toggle}>
         <ModalHeader toggle={toggle} close={<button className="close" onClick={()=>toggle(null)}>×</button>}
 >
           Do you wants to Delete "{gone}"
@@ -167,7 +186,7 @@ const BlogBody = (props) => {
             </Row>
         
         </ModalBody>
-      </Modal>
+      </Modal> }
         <Row>
           <div className="mb-5">
             <Container className="full-container">
@@ -188,13 +207,13 @@ const BlogBody = (props) => {
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>*/}
               {/*  <Row> we Show ShowBlogs here   </Row>...*/}
-                <Row>
+              {user && <Row>
                   <Col className="d-flex  justify-content-center plus-sign ">
                     <Link to="/auth">
                       <BsFillFileEarmarkPlusFill />
                     </Link>
                   </Col>
-                </Row>
+                </Row> }
 
                  {alert && (
                 <Row className="mt-4">
@@ -225,12 +244,12 @@ const BlogBody = (props) => {
                       date={reverseString(item.createdAt)}
                     />
                     
-                    <a
+                { user&& <a
                       onClick={() => toggle(index)}
                       className="delete-button"
                     >
                       <AiFillDelete />
-                    </a>
+                    </a> }
                   </Col>
                 </Row>
                 <Row></Row>

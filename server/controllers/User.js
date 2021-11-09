@@ -48,7 +48,8 @@ dotenv.config();
 
 
 export const getUser = async (req, res) => {
-  const {id} = req.body.googleId;
+  const id = req.body.googleId;
+  console.log(req.body);
   try {
     const post = await User.findOne({ googleId: `${id}` });
     if(post)
@@ -59,7 +60,7 @@ export const getUser = async (req, res) => {
     else
     {
       console.log("lets go");
-      res.status(200).send("okay");
+      res.status(200).send("not okay");
     }
   } catch (error) {
     res.status(404).json({ message: error.message });
