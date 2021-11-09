@@ -8,6 +8,7 @@ import i5 from "./img/ha.jpg";
 import i6 from "./img/tvf.jpg";
 import i7 from "./img/ab.jpg";
 import Player from "./YoutubePlayer";
+import Testimonials from "./Testimonials";
 
 class Guest extends Component {
   render() {
@@ -42,9 +43,11 @@ class Guest extends Component {
         <Player url="https://youtu.be/6tT_xxfE304" cls="student-video"/>
       </Col>
     </Row>
-    <br/><br/><br/><br/>
-
+    <br/><br/>
     <Row>
+    <Testimonials/>
+      </Row>
+    <Row className="mt-5">
     <h2 className="mt-3 mb-4">MY CLIENTS</h2>
     </Row>
     <br/>

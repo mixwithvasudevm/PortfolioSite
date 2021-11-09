@@ -142,3 +142,134 @@
   cursor: pointer;
  
 }
+
+blockquote{
+  margin: .5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+}
+blockquote:before {
+ content: open-quote;
+/*   display: inline; */
+/*   height: 0; */
+  line-height: 0;
+  position: relative;
+  top: 30px;
+  left: -5px;
+  color: #00b9c6;
+  font-size: 6em;
+}
+blockquote:after {
+  content: close-quote;
+   line-height: 0;
+   position: relative;
+   top: 30px;
+   color: #00b9c6;
+   font-size: 6em;
+ }
+
+.main-content.ttm {
+  width: 100%;
+  border: none;
+}
+.main-content.ttm .custom-nav .owl-prev {
+  left: -4%;
+}
+.main-content.ttm .custom-nav .owl-next {
+  right: -4%;
+}
+.ttm-card.card {
+  height: 30rem;
+  background-color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.ttm-card-body {
+  height: 100%;
+  z-index: 3;
+  color: var(--white);
+}
+.ttm-card.card::after {
+  content: "";
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  left: 60%;
+  z-index: 1;
+  background: #00b9c6;
+  border-radius: 50%;
+}
+.ttm-card-body .card-title {
+  color: var(--dark);
+  position: absolute;
+  left: 75%;
+  top: 80%;
+}
+.ttm-card-body .card-subtitle {
+  color: #ffd500;
+  position: absolute;
+  left: 76%;
+}
+
+.main-content {
+  width: 100%;
+  margin: auto;
+  margin-top: 0px !important;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.main-content .custom-nav {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 45%;
+}
+.main-content .custom-nav .owl-prev,
+.main-content .custom-nav .owl-next {
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #000;
+  border-radius: 0.5rem;
+  border: none;
+  z-index: 100;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.main-content .custom-nav .owl-prev:hover,
+.main-content .custom-nav .owl-next:hover {
+  background-color: #00b9c6;
+}
+.main-content .custom-nav .owl-prev {
+  left: -3%;
+}
+.main-content .custom-nav .owl-next {
+  right: 0%;
+}
+.main-content .custom-nav .owl-prev span,
+.main-content .custom-nav .owl-next span {
+  display: block;
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: rotate(45deg);
+}
+.main-content .custom-nav .owl-prev span {
+  left: 40%;
+  top: 35%;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.main-content .custom-nav .owl-next span {
+  right: 40%;
+  top: 35%;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
