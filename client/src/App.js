@@ -23,7 +23,7 @@ function App() {
           <Route path="/blogs" exact component={Blogs} />
           <Route path="/blogs/add" exact component={Add} />
           <Route path="/blogs/:id" exact component={BlogPage} />
-          <Route path="/auth" exact component={SignIn} />
+          <Route path="/admin/auth" exact component={SignIn} />
           <Route path="/students" exact component={Students} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/faq" exact component={Faq} />

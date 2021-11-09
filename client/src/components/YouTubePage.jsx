@@ -17,7 +17,10 @@ const YouTubePage = () => {
   const [user, setUser] = useState(null);
   const [url, setUrl] = useState("");
   const [page, setPage] = useState(1);
+  const [load,setLoad]= useState(true);
   const [play, setPlay] = useState("");
+  const [previous, setPrevious] = useState(null);
+  var video;
   var video;
   useEffect(() => {
     fetchData();
@@ -26,6 +29,7 @@ const YouTubePage = () => {
   useEffect(() => {
     if (user) {
       setUrl(user[0].snippet.resourceId.videoId);
+      setLoad(false);
     }
   }, [user]);
 
@@ -52,27 +56,56 @@ const YouTubePage = () => {
   };
 
   const handleNext = async () => {
+    setLoad(true);
+    console.log(play);
     try {
       const current = page;
-      // let playdata= await youtubePage.get(`playlistItems?&playlistId=UUiU0DwnFdPN4hhnq2jKlEyw&pageToken=${play}&key=AIzaSyASk-OtQKcCa_0qWttUn-YB5WzFReT3ThM&maxResults=9`)
-      // console.log(playdata);
-      // console.log("hello");
-      // setUser(playdata.data.items);
-      // let nexttoken= playdata.data.nextPageToken;
-
-      // // this will re render the view with new data
-      // setPlay(nexttoken);
+      const params={
+        "pageToken":play
+      }
+      const res = await youtube.get("",{ 
+       params
+    })
+        // console.log(res.data)
+        let loginData = res.data.items;
+        let nexttoken = res.data.nextPageToken;
+        let prev= res.data.prevPageToken;
+        // this will re render the view with new data
+        setPrevious(prev);
+        setUser(loginData);
+        setPlay(nexttoken);
       setPage(current + 1);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const handlePrevious = () => {
+  const handlePrevious = async() => {
     const current = page;
+    try{
     if (current > 1) {
-      setPage(current - 1);
+      setLoad(true);
+      const params={
+        "pageToken":previous
+      }
+      const res = await youtube.get("",{ 
+      params
+    })
+        // console.log(res.data)
+        let loginData = res.data.items;
+        let nexttoken = res.data.nextPageToken;
+        let prev= res.data.prevPageToken;
+        // this will re render the view with new data
+        setPrevious(prev);
+        console.log(previous)
+        setUser(loginData);
+        setPlay(nexttoken);
+        setPage(current - 1);
     }
+  }
+  catch(err){
+    console.log(err);
+  }
   };
   return (
     <div>
@@ -100,6 +133,17 @@ const YouTubePage = () => {
             </Pagination>
           </Col>
         </Row>
+        {load&&
+              <Row>
+                <Col className="d-flex align-items-center justify-content-center h4">
+                  {/* <p className="text-weight-bold">
+                Content is loading please wait .....
+                </p> */}
+                <div className="loader"></div>
+                </Col>
+                </Row>
+        }
+        {!load&&
         <Row lg={3} className="youtube-page-thumb">
           {user &&
             user.map((item, index) => {
@@ -121,6 +165,7 @@ const YouTubePage = () => {
               );
             })}
         </Row>
+}
         <Row className="d-flex align-items-center justify-content-center mt-5">
           <Col className="d-flex align-items-center justify-content-center mt-5">
             <Pagination aria-label="Page navigation example" size="sm">
