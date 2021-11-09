@@ -25,7 +25,9 @@ app.options("*", cors());
 
 app.use("/blogs",cors(), blogRoutes);
 app.use("/auth/google",cors(), userRoutes);
-
+app.get("/", (req, res) => {
+	res.send("Welcome to Mix-With-Vasudev");
+});
 
 const PORT = process.env.PORT || 5000;
 
