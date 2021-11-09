@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"; 
-import { Container,Row,Col } from "reactstrap";
+import { Row,Col } from "reactstrap";
 import YouTubePage from "../components/YouTubePage";
 import mix from "../components/img/mix.png";
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import * as api from "../api";
-import beats from "../components/img/beats.jpg";
 import parse from 'html-react-parser';
 
 const intialValue = [];

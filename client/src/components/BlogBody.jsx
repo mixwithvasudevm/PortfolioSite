@@ -11,12 +11,10 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
 } from "reactstrap";
 import BlogCard from "./BlogCard";
 import * as api from "../api";
-import ShowBlogs from "./ShowBlogs";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsFillFileEarmarkPlusFill } from "react-icons/bs";
 import { AiFillDelete } from "react-icons/ai";
 
@@ -32,7 +30,7 @@ function reverseString(str) {
     if (str === "T") {
       break;
     }
-    if (j == 0 && str[i] === "-") {
+    if (j === 0 && str[i] === "-") {
       year = str.substring(0, i);
       month = str.substring(i + 1, i + 3);
       date = str.substring(i + 4, i + 6);
@@ -47,7 +45,6 @@ function reverseString(str) {
 
 const BlogBody = (props) => {
   const [user, setUser] = useState(false);
-  const [userId, setUserId] = useState(null);
   const [alert, setAlert] = useState(false);
   const [gone, setGone] = useState(null);
   const [infoData, setInfoData] = useState(initialValue);
@@ -59,7 +56,6 @@ const BlogBody = (props) => {
   const toggle = (index) => {
     if(index!==null)
     {
-    console.log(index);
     setDel(index);
     const title = infoData[index].title;
     setGone(title)
@@ -67,7 +63,6 @@ const BlogBody = (props) => {
 
     setOpen(!isOpen);
   };
-  const history = useHistory();
   useEffect(() => {
     api
       .fetchItems(page)
@@ -116,11 +111,9 @@ const BlogBody = (props) => {
       api
       .confirmUser(result)
       .then((response) => {
-        console.log(response);
         if(response.data==="okay")
         {
           setUser(true);
-          console.log(user)
         }
         else if(response.data==="not okay"){ 
            setUser(false);
@@ -164,7 +157,6 @@ const BlogBody = (props) => {
     api
       .deleteItem(id)
       .then((res) => {
-        console.log(res);
         if (res.data === "okay") {
             setLoad(false);
             setAlert(true);

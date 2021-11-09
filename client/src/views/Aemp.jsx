@@ -1,4 +1,4 @@
-import React, { Component,useEffect } from "react";
+import React, {useEffect } from "react";
 
  import AempHead from "../components/AempHead";
  import AempBody from "../components/AempBody";

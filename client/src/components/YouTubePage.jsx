@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -8,7 +8,6 @@ import {
   PaginationLink,
 } from "reactstrap";
 import youtube from "../api/youtube";
-import youtubePage from "../api/youtubePage";
 import Player from "./YoutubePlayer";
 
 const intialValue = [{}];

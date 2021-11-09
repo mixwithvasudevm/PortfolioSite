@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { Header, Footer } from "./components";
 import BlogPage from "./views/BlogPage";
-import * as api from "./api";
 import { Blogs, Home, Add, Aemp, Students, SignIn , AboutPageView ,Contact, Faq,YouTube} from "./views";
 
 function App() {
