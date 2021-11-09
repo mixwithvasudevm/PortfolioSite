@@ -10,16 +10,16 @@ import dotenv from "dotenv";
 
 const app = express();
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://priceless-raman-2d8bb2.netlify.app/");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "https://priceless-raman-2d8bb2.netlify.app/");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 dotenv.config();
 
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+app.use(cors({"origin": "https://priceless-raman-2d8bb2.netlify.app"}));
 app.use(passport.initialize());
 app.use("/blogs", blogRoutes);
 app.use("/auth/google", userRoutes);
