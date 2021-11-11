@@ -40,20 +40,21 @@ const infoData = [
 const slides = infoData.map((item, index) => {
   return (
     <Card key={index} className="my-3 ttm-card">
+        <div className="mt-4">
+          <CardTitle className="mx-lg-3" tag="h5">
+            {item.title}
+          </CardTitle>
+          {/* <CardSubtitle tag="h6" className="text-center">
+            {item.subtitle}
+          </CardSubtitle> */}
+    </div>
       <div className="ttm-card-body d-flex align-items-start flex-column">
         <div>
           <CardText className="p-4">
             <blockquote>{item.para}</blockquote>
           </CardText>
         </div>
-        <div className="mt-auto mx-auto pb-5">
-          <CardTitle className="text-center" tag="h5">
-            {item.title}
-          </CardTitle>
-          <CardSubtitle tag="h6" className="text-center">
-            {item.subtitle}
-          </CardSubtitle>
-        </div>
+       
       </div>
     </Card>
   );
@@ -87,18 +88,20 @@ const options = {
       margin: 40,
     },
     1200: {
-      items: 1,
-      margin: 90,
+      items: 3,
+      margin: 30,
     },
   },
 };
 
 const Testimonials = () => {
   return (
-    <div className="main-content ttm mb-5">
+    <div className="testimonials p-4">
+    <div className="main-content ttm mb-5 mx-lg-5">
       <OwlCarousel className="owl-carousel" {...options}>
         {slides}
       </OwlCarousel>
+    </div>
     </div>
   );
 };

@@ -2,7 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import {AiOutlineArrowRight} from "react-icons/ai";
+import parse from 'html-react-parser';
 const BlogCard = ({title,id,para,src,date}) => {
+
+  const content=para.substring(0, 20)+"....";
 
   return (
     
@@ -22,11 +25,11 @@ const BlogCard = ({title,id,para,src,date}) => {
           {date}
           </Col>
           </Row>
-          {/* <Row>
+          <Row>
             <Col className="blog-para">
-             {parse(para)}
+             {parse(content)}
           </Col>
-          </Row> */}
+          </Row>
           <Row className="blog-read">
             <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
           </Row>

@@ -5,6 +5,8 @@ import Guest from "../components/Guest";
 import Landing from "../components/Landing";
 import Album from "../components/Album";
 import Ytext from "../components/Ytext";
+import Testimonials from "../components/Testimonials";
+import Client from "../components/Clients";
 
 const Home =() => {
 
@@ -18,6 +20,8 @@ const Home =() => {
         <Album />
         <Ytext />
         <Guest />
+        <Testimonials />
+        <Client />
         <Contact />
       </div>
     );
