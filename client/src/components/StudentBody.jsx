@@ -8,7 +8,7 @@ class StudentBody extends Component {
         <Container className=" ml-4 mr-4">
           <Row className="mb-4">
             <Col className="mt-5 d-flex align-items-center justify-content-center h1">
-              <h2 className="courses-offered">STUDENT'S WORK</h2>
+              <h2 className="courses-offered ">STUDENT'S WORK</h2>
             </Col>
           </Row>
           <Row className="mb-2">

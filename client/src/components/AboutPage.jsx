@@ -13,7 +13,7 @@ class AboutPage extends Component {
         <Container className="mt-5 mb-5">
           <Row className="mb-5">
             <Col xs="">            
-                    <h2 className="mt-3 mx-lg-5 mb-3">ABOUT ME</h2>
+                    <h2 className="header-family mt-3 mx-lg-5 mb-3">ABOUT ME</h2>
                     <Row>
                     <Col className="mt-3 mx-lg-5 mb-3">
                     <div className="mb-5">

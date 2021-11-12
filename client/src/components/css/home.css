@@ -156,7 +156,7 @@ blockquote:before {
   position: relative;
   top: 30px;
   left: -5px;
-  color: #00b9c6;
+  color: #000;
   font-size: 6em;
 }
 blockquote:after {
@@ -164,24 +164,25 @@ blockquote:after {
    line-height: 0;
    position: relative;
    top: 30px;
-   color: #00b9c6;
+   color: #000;
    font-size: 6em;
  }
 
 .main-content.ttm {
-  width: 100%;
+  width: 95%;
   border: none;
 }
 .main-content.ttm .custom-nav .owl-prev {
   left: -4%;
 }
 .main-content.ttm .custom-nav .owl-next {
-  right: -4%;
+  right: -9%;
 }
 .ttm-card.card {
   height: 30rem;
-  background-color: #000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  width: 90%;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0,0.2);
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -189,31 +190,23 @@ blockquote:after {
 .ttm-card-body {
   height: 100%;
   z-index: 3;
-  color: var(--white);
+  color: var(--dark);
 }
-.ttm-card.card::after {
-  content: "";
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  left: 60%;
-  z-index: 1;
-  background: #00b9c6;
-  border-radius: 50%;
-}
+
 .ttm-card-body .card-title {
   color: var(--dark);
-  position: absolute;
-  left: 75%;
-  top: 80%;
 }
 .ttm-card-body .card-subtitle {
   color: #ffd500;
   position: absolute;
   left: 76%;
+}
+
+.testimonials{
+  background-image: url(../img/testimonial.jpg);
+  width: 100vw;
+  height: 85vh;
+  background-size: cover;
 }
 
 .main-content {
@@ -226,7 +219,7 @@ blockquote:after {
 
 .main-content .custom-nav {
   height: 10px;
-  width: 100%;
+  width: 93%;
   position: absolute;
   z-index: 100;
   top: 45%;

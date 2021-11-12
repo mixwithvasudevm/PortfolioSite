@@ -209,7 +209,7 @@ const BlogBody = (props) => {
               {/*  <Row> we Show ShowBlogs here   </Row>...*/}
               {user && <Row>
                   <Col className="d-flex  justify-content-center plus-sign ">
-                    <Link to="/auth">
+                    <Link to="/blogs/add">
                       <BsFillFileEarmarkPlusFill />
                     </Link>
                   </Col>

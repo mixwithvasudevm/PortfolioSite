@@ -20,6 +20,15 @@
   background: #000;
 }
 
+.header-family{
+font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+color: #191a1f;
+font-size: 2.8em;
+font-weight: 500;
+text-transform: uppercase;
+
+
+}
 .full-container {
   max-width: unset !important;
 }
@@ -37,6 +46,10 @@ h2::after {
   border-radius: 2px;
   width: 100px;
   margin-top: 20px;
+}
+.courses-offered
+{
+  font-weight: 500;
 }
 .courses-offered::after {
   width: auto;
@@ -66,7 +79,7 @@ h2::after {
 }
 
 .nav-brand {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   margin-right: 15vw;
   transform: translateY(-4px);
 }
@@ -288,6 +301,7 @@ textarea {
   transform: translateY(3px);
   box-shadow: none;
 }
+/* youtube-page-player */
 .pricing-plan-pro .pricing-plan-purchase-btn {
   background-color: #10bb87;
   color: #fff;
@@ -374,10 +388,11 @@ textarea {
 .youtube-heading{
   background-color:#000000;
   width: 100%;
-  height: 60vh !important;
+  height: 125vh !important;
   margin: auto;
   margin-top: 0px !important;
   background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 70% 100%,0% 85%);
   color: #fff;
   background-position-y: bottom;
 }
@@ -386,6 +401,14 @@ textarea {
   margin-left: 15vw;
   height: 70vh;
 }
+.youtube-page-player-ytpage{
+ margin: auto;
+ width: 80vw;
+ margin-right: auto;
+ margin-top: 3vh;
+ height: 72vh;
+}
+
 .main-page-player{
   width: 52vw;
   height: 70vh;
