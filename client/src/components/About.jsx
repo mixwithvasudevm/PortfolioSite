@@ -18,7 +18,7 @@ class About extends Component {
               <Container>
                 <Row>
                   <Col className="mt-5 mx-lg-5 mb-4">
-                    <h2>ARTIST BIO</h2>
+                    <h2 >ARTIST BIO</h2>
                   </Col>
                 </Row>
                 <Row>

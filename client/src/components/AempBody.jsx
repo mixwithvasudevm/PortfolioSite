@@ -72,6 +72,7 @@ class AempBody extends Component {
                     <Col>
                       <ul className="pricing-plan-features pricingli">
                         <li>3rd Party Plugins</li>
+                       
                         <li>Advanced Mixing Techniques</li>
                         <li>Studio Ethics</li>
                         <li>Music Business</li>

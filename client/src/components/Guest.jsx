@@ -14,7 +14,7 @@ class Guest extends Component {
       <Container>
       <Row > 
       <Col className="mb-5">
-      <h2 className="mt-5 mb-5 mx=lg-4">FEW OF MY WORK</h2>
+      <h2 className=" header-family mt-5 mb-5 mx=lg-4">FEW OF MY WORK</h2>
       </Col>
     </Row>
 

@@ -11,7 +11,7 @@ const Client=()=>{
 return(
 <Container>
 <Row className="mt-5">
-    <h2 className="mt-3 mb-4">MY CLIENTS</h2>
+    <h2 className="header-family mt-3 mb-4">MY CLIENTS</h2>
     </Row>
     <br/>
    <Row className="mb-5">
