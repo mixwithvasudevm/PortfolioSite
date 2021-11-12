@@ -19,10 +19,10 @@
 
 .ShowBlogs{
   width: 100vw;
-  height:60vh;
-  background-color: #363636 ;
+  height:110vh;
+  background-color: #000 ;
   color: #fff;
-  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0,10% 0%, 100% 8%,100% 90%, 70% 100%,0% 85%);
 }
 
 .blog-date{

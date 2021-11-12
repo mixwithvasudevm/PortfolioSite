@@ -30,7 +30,7 @@ const Header = () => {
         light
         className={navbarSolid ? "active" : ""}
       >
-        <NavbarBrand href="/" className="px-3 nav-brand">
+        <NavbarBrand href="/" className="px-3 nav-brand ">
           Mix With <div className="vasu">Vasudev</div>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -38,7 +38,7 @@ const Header = () => {
           <Nav navbar>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link "
+                className="mx-lg-3 text-center font-weight-bold nav-link "
                 to="/home"
               >
                 HOME
@@ -46,7 +46,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/about"
               >
                 ABOUT
@@ -54,7 +54,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link "
+                className="mx-lg-3 text-center font-weight-bold nav-link "
                 to="/aemp"
               >
                 AEMP COURSES
@@ -62,7 +62,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/students"
               >
                 STUDENT'S WORK
@@ -70,7 +70,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/youtube"
               >
                 YOUTUBE
@@ -78,7 +78,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/blogs"
               >
                 BLOG
@@ -86,7 +86,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/faq"
               >
                 FAQ
@@ -94,7 +94,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                className="mx-lg-4 text-center font-weight-bold nav-link"
+                className="mx-lg-3 text-center font-weight-bold nav-link"
                 to="/contact"
               >
                 CONTACT
