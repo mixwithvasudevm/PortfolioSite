@@ -10,7 +10,7 @@ import {
 import youtube from "../api/youtube";
 import Player from "./YoutubePlayer";
 
-const intialValue = [{}];
+
 
 const YouTubePage = () => {
   const [user, setUser] = useState(null);
@@ -19,8 +19,7 @@ const YouTubePage = () => {
   const [load,setLoad]= useState(true);
   const [play, setPlay] = useState("");
   const [previous, setPrevious] = useState(null);
-  var video;
-  var video;
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -109,13 +108,21 @@ const YouTubePage = () => {
   return (
     <div>
       <Container fluid className=" mb-2">
-        <Row className="mb-5">
-          <Col className="mt-5">
+      
+      <Row className="mt-5 mb-4 ml-5">
+         <Col className="mt-5 mb-4 ml-5" >
+   
+          <Container fluid className="album album-back mt-2 mb-2">
+           
+           <br/>
             <Player
               url={`https://www.youtube.com/watch?v=${url}`}
-              cls="youtube-page-player"
+              cls="youtube-page-player-ytpage "
+              clean="true"
+            
             />
-          </Col>
+            </Container>
+</Col>
         </Row>
         <Row className="d-flex align-items-center justify-content-center mt-5 mb-5">
           <Col className="d-flex align-items-center justify-content-center mt-5">
