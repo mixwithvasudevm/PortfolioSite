@@ -3,6 +3,7 @@ import { Container, Row, Col,Alert} from "reactstrap";
 import PhoneInput from 'react-phone-number-input/input';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
+import {TiTick} from "react-icons/ti";
 init("user_rMDdfwdCqLatxLl0oXIVO");
 
 
@@ -13,7 +14,7 @@ const Newsletter = () => {
 });
   const [alert,setAlert]=useState(false);
   const [done,setDone]=useState(false);
-  const [submit, setSubmit] = useState("SUBSCRIBE");
+  const [submit, setSubmit] = useState(null);
   const [wrong, setWrong] = useState(null);
 
 
@@ -55,7 +56,12 @@ return true;}
           }, 'user_rMDdfwdCqLatxLl0oXIVO')
         .then((result) => {
             setSubmit("Done");
+            setWrong(null);
             setAlert(false);
+            setValues({
+              number: "",
+              email: ""
+            })
             console.log(result.text);
         }, (error) => {
              setAlert(true);
@@ -110,9 +116,16 @@ return true;}
               <Row className="mt-3">
              <Col className="d-flex align-items-center justify-content-center">
 
-             <input className="newsletter-button" type="submit" value={submit} />
+             <input className="newsletter-button" type="submit" value="SUBSCRIBE" />
                 </Col>
                 </Row>
+                {done && (
+                 <Row className="mt-3">
+                 <Col className="d-flex align-items-center justify-content-center">
+                   <h1><TiTick/></h1><h5>You have successfully subscribed to Mix with Vasudev</h5>
+                 </Col>
+               </Row>
+                )}
           </form>
         </Container>
     </div>
