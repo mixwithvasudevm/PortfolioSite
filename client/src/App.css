@@ -288,6 +288,7 @@ textarea {
   transform: translateY(3px);
   box-shadow: none;
 }
+/* youtube-page-player */
 .pricing-plan-pro .pricing-plan-purchase-btn {
   background-color: #10bb87;
   color: #fff;
@@ -387,6 +388,14 @@ textarea {
   margin-left: 15vw;
   height: 70vh;
 }
+.youtube-page-player-ytpage{
+ margin: auto;
+ width: 80vw;
+ margin-right: auto;
+ margin-top: 3vh;
+ height: 72vh;
+}
+
 .main-page-player{
   width: 52vw;
   height: 70vh;
