@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 // import "./css/pricing-plan.css";
-
+import { GoPrimitiveDot } from "react-icons/go";
 class AempBody extends Component {
   render() {
     return (
@@ -17,28 +17,30 @@ class AempBody extends Component {
                   <h4 className="d-flex align-items-center justify-content-center pricing-plan-cost ml-auto mb-1">
                   MIXING & MASTERING COURSE
                   </h4>
-                  <p className="d-flex align-items-center justify-content-center">(ONLINE)</p>
-                  <p className=" d-flex align-items-center justify-content-center pricing-plan-title"> Rs. 40,000/- + GST</p>
+                  <p className="">(ONLINE)</p>
+                  <p className="  pricing-plan-title"> Rs. 40,000/- + GST</p>
                   <br/>
                   <Row>
                     <Col>
                       <ul className="pricing-plan-features pricingli">
-                        <li>Music Theory</li>
-                        <li>Sound Theory</li>
-                        <li>MIDI</li>
-                        <li>Recording</li>
-                        <li>Editing</li>
-                        <li>Equalisation</li>
-                        <li>Compression</li>
+                      <i class="fas fa-angle-double-right"></i>
+                      
+                        <li><GoPrimitiveDot/> Music Theory</li>
+                        <li><GoPrimitiveDot/> Sound Theory</li>
+                        <li><GoPrimitiveDot/> MIDI</li>
+                        <li><GoPrimitiveDot/> Recording</li>
+                        <li><GoPrimitiveDot/> Editing</li>
+                        <li><GoPrimitiveDot/> Equalisation</li>
+                        <li><GoPrimitiveDot/> Compression</li>
                       </ul>
                     </Col>
                     <Col>
                       <ul className="pricing-plan-features pricingli">
-                        <li>FX & Automation</li>
-                        <li>Mastering</li>
-                        <li>3rd Party Plugins</li>
-                        <li>Advanced Mixing Techniques</li>
-                        <li>Guest Lecture By Industry Professionals</li>
+                        <li><GoPrimitiveDot/> FX & Automation</li>
+                        <li><GoPrimitiveDot/> Mastering</li>
+                        <li><GoPrimitiveDot/> 3rd Party Plugins</li>
+                        <li><GoPrimitiveDot/> Advanced Mixing Techniques</li>
+                        <li><GoPrimitiveDot/> Guest Lecture By Professionals</li>
                       </ul>
                     </Col>
                   </Row>
