@@ -19,12 +19,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #000;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 .header-family{
-font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+font-family: Montserrat,Sans-serif;
+/* var( --e-global-typography-primary-font-family ), Sans-serif */
 color: #191a1f;
 font-size: 2.8em;
-font-weight: 500;
+font-weight: 700;
 text-transform: uppercase;
 
 
