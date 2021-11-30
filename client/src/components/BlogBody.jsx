@@ -190,9 +190,13 @@ const BlogBody = (props) => {
         <Row>
           <div className="mb-5">
             <Container className="full-container">
-              <Row className="mb-5 ShowBlogs d-flex align-items-center justify-content-center h1">
-                Blogs
+              <Row className="mb-5 ShowBlogs d-flex align-items-center justify-content-center h2">
+                A place of our thoughts , fear , finds , fads , obsessions and opinions.<br/>
+                <br/>Welcome to Village Hidden in the Sound
               </Row>
+              {/* <Row className="mb-5 ShowBlogs d-flex align-items-center justify-content-center h2">
+               Welcome to Temple of Sound
+              </Row> */}
               {load&&
               <Row>
                 <Col className="d-flex align-items-center justify-content-center h4">

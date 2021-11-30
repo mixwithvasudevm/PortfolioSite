@@ -6,7 +6,7 @@ class AempHead extends Component {
     return (
       <div className="faq-heading mt-5 mb-5">
         <Container className="full-container mt-5">
-          <Row className="mb-5">
+          <Row className="mb-5 p-5">
             <Col className="mt-5 d-flex align-items-center justify-content-center h1">
             COURSES OFFERED
             </Col>

@@ -6,6 +6,7 @@ import parse from 'html-react-parser';
 const BlogCard = ({title,id,para,src,date}) => {
 
   const content=para.substring(0, 20)+"....";
+  console.log(para);
 
   return (
     
@@ -25,11 +26,11 @@ const BlogCard = ({title,id,para,src,date}) => {
           {date}
           </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col className="blog-para">
-             {parse(content)}
+             {parse(para)}
           </Col>
-          </Row>
+          </Row> */}
           <Row className="blog-read">
             <Link to={`/blogs/${id}`}>Read More <AiOutlineArrowRight/></Link>
           </Row>

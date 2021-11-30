@@ -97,8 +97,8 @@ h2::after {
   font-weight: 500;
 }
 .navbar-light .navbar-nav .nav-link.active {
-  color: #fff !important;
-  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #FFA500 !important;
+  background-color: rgba(0, 0, 0, 1) !important;
   border-radius: 10px !important;
 }
 .nav-link:before {
