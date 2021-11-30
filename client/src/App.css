@@ -266,7 +266,7 @@ textarea {
 
 .pricing-plan-features {
   list-style: none;
-  padding-left: 0;
+  padding-left: 1rem;
   font-size: 14px;
   line-height: 2.14;
   margin-bottom: 35px;
@@ -303,6 +303,16 @@ textarea {
   -webkit-transform: translateY(3px);
   transform: translateY(3px);
   box-shadow: none;
+}
+
+.aempLiColor
+{
+  color: #00b9c6;
+  display: inline-block;
+}
+.aempLiTextAlign
+{
+  text-align: left;
 }
 /* youtube-page-player */
 .pricing-plan-pro .pricing-plan-purchase-btn {

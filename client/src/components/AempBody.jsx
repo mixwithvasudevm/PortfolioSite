@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 // import "./css/pricing-plan.css";
-import { GoPrimitiveDot } from "react-icons/go";
+import { AiOutlineDoubleRight } from "react-icons/ai";
 class AempBody extends Component {
   render() {
     return (
@@ -18,29 +18,29 @@ class AempBody extends Component {
                   MIXING & MASTERING COURSE
                   </h4>
                   <p className="">(ONLINE)</p>
-                  <p className="  pricing-plan-title"> Rs. 40,000/- + GST</p>
+                  <p className=" pricing-plan-title"> Rs. 40,000/- + GST</p>
                   <br/>
                   <Row>
                     <Col>
                       <ul className="pricing-plan-features pricingli">
                       <i class="fas fa-angle-double-right"></i>
                       
-                        <li><GoPrimitiveDot/> Music Theory</li>
-                        <li><GoPrimitiveDot/> Sound Theory</li>
-                        <li><GoPrimitiveDot/> MIDI</li>
-                        <li><GoPrimitiveDot/> Recording</li>
-                        <li><GoPrimitiveDot/> Editing</li>
-                        <li><GoPrimitiveDot/> Equalisation</li>
-                        <li><GoPrimitiveDot/> Compression</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Music Theory</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Sound Theory</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> MIDI</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Recording</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Editing</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Equalisation</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Compression</li>
                       </ul>
                     </Col>
                     <Col>
-                      <ul className="pricing-plan-features pricingli">
-                        <li><GoPrimitiveDot/> FX & Automation</li>
-                        <li><GoPrimitiveDot/> Mastering</li>
-                        <li><GoPrimitiveDot/> 3rd Party Plugins</li>
-                        <li><GoPrimitiveDot/> Advanced Mixing Techniques</li>
-                        <li><GoPrimitiveDot/> Guest Lecture By Professionals</li>
+                      <ul className="text-align-right pricing-plan-features pricingli">
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> FX & Automation</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Mastering</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> 3rd Party Plugins</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Advanced Mixing Techniques</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Guest Lecture By Professionals</li>
                       </ul>
                     </Col>
                   </Row>
@@ -65,28 +65,28 @@ class AempBody extends Component {
                   </p> */}
                   <Row>
                     <Col>
-                      <ul className="pricing-plan-features pricingli">
-                        <li>Music Theory</li>
-                        <li>Sound Theory</li>
-                        <li>MIDI</li>
-                        <li>Recording</li>
-                        <li>Editing</li>
-                        <li>Equalisation</li>
-                        <li>Compression</li>
-                        <li>FX & Automation</li>
-                        <li>Mastering</li>
+                      <ul className=" text-align-right pricing-plan-features pricingli">
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Music Theory</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Sound Theory</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> MIDI</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Recording</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Editing</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Equalisation</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Compression</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> FX & Automation</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Mastering</li>
                       </ul>
                     </Col>
                     <Col>
-                      <ul className="pricing-plan-features pricingli">
-                        <li>3rd Party Plugins</li>
+                      <ul className=" text-align-right pricing-plan-features pricingli">
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> 3rd Party Plugins</li>
                        
-                        <li>Advanced Mixing Techniques</li>
-                        <li>Studio Ethics</li>
-                        <li>Music Business</li>
-                        <li>Foley Sounds</li>
-                        <li>Monthly Quizzes</li>
-                        <li>Guest Lecture By Industry Professionals</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Advanced Mixing Techniques</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Studio Ethics</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Music Business</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Foley Sounds</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Monthly Quizzes</li>
+                        <li className="aempLiTextAlign"><div className="aempLiColor"><AiOutlineDoubleRight/></div> Guest Lecture By Industry Professionals</li>
                       </ul>
                     </Col>
                     
@@ -109,7 +109,7 @@ class AempBody extends Component {
                   <Row>
                  
                      <Col>
-                      <ul className="pricing-plan-features pricingli">
+                      <ul className=" text-align-right pricing-plan-features pricingli">
                         <li></li>      <br/>
                          <li></li>      <br/>
                          <li></li>      <br/>
@@ -120,7 +120,7 @@ class AempBody extends Component {
                       </ul>
                     </Col>
                     <Col>
-                      <ul className="pricing-plan-features pricingli">
+                      <ul className=" text-align-right pricing-plan-features pricingli">
                          <li></li>      <br/>
                          <li></li>      <br/>
                          <li></li>      <br/>
