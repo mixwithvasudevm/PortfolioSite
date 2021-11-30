@@ -99,13 +99,13 @@ return true;}
                   <Col className="d-flex align-items-center justify-content-center">
       <input type="email" className="newsletter-input" id='email'
                       value={values.email}
-                      type="email" placeholder="email"
+                      type="email" placeholder="Email"
             onChange={handleChange()}/>
       &nbsp;&nbsp;&nbsp;
       <input
              country="IND"
              className="newsletter-input"
-             placeholder="contact no."
+             placeholder="Contact no."
              id="number"
              value={values.number}
              isValidPhoneNumber={true}
