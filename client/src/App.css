@@ -481,3 +481,9 @@ textarea {
 .ql-size span[data-value="large"]::before {
   font-size: 20px !important;
 }
+.aemp_registernow
+{
+
+  height: 8vh;
+  width: 20vw;
+}

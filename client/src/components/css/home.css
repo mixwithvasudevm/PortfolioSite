@@ -99,7 +99,7 @@
   cursor: pointer;
   width: fit-content;
   text-decoration: none;
-  font-size: 0.8rem !important;
+  font-size: 1.2rem !important;
 }
 .dark-btn:hover {
   background-color: #f559a4 !important;

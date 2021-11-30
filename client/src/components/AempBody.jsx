@@ -44,7 +44,7 @@ class AempBody extends Component {
                       </ul>
                     </Col>
                   </Row>
-                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Register Now </div></a>
+                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn aemp_registernow"> Register Now </div></a>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ class AempBody extends Component {
                     </Col>
                     
                   </Row>
-                <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Register Now </div></a>
+                <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn aemp_registernow"> Register Now </div></a>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ class AempBody extends Component {
                     </Col>
                    
                   </Row>
-                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn registernowbtn"> Know More </div></a>
+                  <a href="https://api.whatsapp.com/send?phone=917678427715&text=Welcome%20to%20Mix%20With%20Vasudev"> <div className="dark-btn aemp_registernow registernowbtn"> Know More </div></a>
                 </div>
               </div>
             </div>
@@ -151,6 +151,6 @@ class AempBody extends Component {
       </div>
     );
   }
-}
+}  
 
 export default AempBody;
