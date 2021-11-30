@@ -12,11 +12,14 @@ class AempBody extends Component {
               <div className="card pricing-card pricing-card-highlighted  pricing-plan-pro">
                 <div className="card-body">
                   <i className="mdi mdi-trophy pricing-plan-icon"></i>
-                  <p className="pricing-plan-title">MIXING & MASTERING COURSE</p>
-                  <p>(ONLINE)</p>
-                  <h4 className="pricing-plan-cost ml-auto ">
-                    Rs. 40,000/- + GST
+                
+                
+                  <h4 className="d-flex align-items-center justify-content-center pricing-plan-cost ml-auto mb-1">
+                  MIXING & MASTERING COURSE
                   </h4>
+                  <p className="d-flex align-items-center justify-content-center">(ONLINE)</p>
+                  <p className=" d-flex align-items-center justify-content-center pricing-plan-title"> Rs. 40,000/- + GST</p>
+                  <br/>
                   <Row>
                     <Col>
                       <ul className="pricing-plan-features pricingli">
@@ -47,11 +50,14 @@ class AempBody extends Component {
               <div className="card pricing-card pricing-card-highlighted pricing-plan-basic">
                 <div className="card-body">
                   <i className="mdi mdi-cube-outline pricing-plan-icon"></i>
-                  <p className="pricing-plan-title">AEMP COURSES</p>
-                  <p>(ONLINE)</p>
+                 
+              
                   <h4 className="pricing-plan-cost ml-auto mb-1">
-                    Rs. 85,000/- + GST
+                  AEMP COURSES
                   </h4>
+                  <p>(ONLINE)</p>
+                  <p className="pricing-plan-title"> Rs. 85,000/- + GST</p>
+                  <br/>
                   {/* <p className="pricing-plan-title mt-0 mb-4 text-danger">
                     (Rockschool, London Affiliated)
                   </p> */}
@@ -92,11 +98,12 @@ class AempBody extends Component {
               <div className="card pricing-card pricing-card-highlighted  pricing-plan-pro">
                 <div className="card-body">
                   <i className="mdi mdi-trophy pricing-plan-icon"></i>
-                  <p className="pricing-plan-title">OFFLINE COURSE</p>
-                  <p>(Coming Soon!)</p>
-                    <h4 className="pricing-plan-cost ml-auto mb-1">
-                    Launching Soon
+                  <h4 className="pricing-plan-cost ml-auto mb-1">
+                    OFFLINE COURSE
                   </h4>
+                  <p className="pricing-plan-title"> Coming Soon!!</p>
+                 
+                   
                   <Row>
                  
                      <Col>
